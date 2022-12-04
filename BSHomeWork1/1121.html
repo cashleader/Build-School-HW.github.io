@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="reset.css">
+    <style>
+        .wrap {
+            margin:auto;
+            width: 1920px;
+            height: 1080px;
+            flex-wrap: wrap;
+            align-content: space-evenly;
+            /* 將空白空間平均分配 */
+            height: 100%;
+        }
+        .header{
+            margin-bottom: 120px;
+        }
+        .header h1 {
+            width: 80%;
+            padding-bottom: 22px;
+            margin:auto;
+            font-size: 36px;
+            color: #42474c;
+            text-align: center;
+            font-family: Prata;
+            font-weight: 400;
+        }
+
+        .header span {
+            color: #b8ad90;
+        }
+
+        .header p {
+            font-size: 18px;
+            font-weight: 300;
+            width: 70%;
+            text-align: center;
+            margin: 0 auto;
+            line-height: 2;
+        }
+
+        .body {
+            display: flex;
+            flex-wrap: wrap;
+            width: 100%;
+            justify-content: space-between;
+            /* 平均分配寬和間距 */
+            flex-wrap: wrap;
+            /* 多行 */
+            align-items: center;
+            /* 每行對齊交錯軸線 */
+        }
+
+        .box {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .box>div {
+            display: flex;
+            padding: 45px 0;
+        }
+
+        .img {
+            padding: 10px;
+            margin-bottom: 5px;
+            /* width: 80px; */
+            /* height: 80px; */
+        }
+
+        .text h3 {
+            color: #b8ad90;
+            font-size: 14px;
+            line-height: 24px;
+        }
+
+        .text p {
+            text-align: left;
+            font-size: 16px;
+            font-weight: 300;
+            line-height: 24px;
+            color: #42474c;
+        }
+
+        .phone img {
+            border-radius: 5%;
+            vertical-align: baseline;
+        }
+
+        .row-default {
+            text-align: left;
+        }
+
+        .box img {
+            border-radius: 50%;
+            margin: auto;
+        }
+        .row-reverse,
+        .row-reverse p {
+            flex-direction: row-reverse;
+            text-align: right;
+        }
+
+        .row-reverse .text {
+            margin-right: 15px;
+        }
+
+        .row-default .text {
+            margin-left: 15px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="wrap">
+        <div class="header">
+            <h1>Title title<span>ipsum dolor</span></h1>
+            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+                Obcaecati voluptatibus facilis aliquid laborum nobis aperiam
+                quidem aliquam esse dolorem adipisci, optio
+                error sint sequi eos eum ex? Itaque, optio eveniet! </p>
+        </div>
+        <div class="body">
+            <div class="box">
+                <div class="row-reverse">
+                    <div class="img">
+                        <img src="https://picsum.photos/100/100/?random=10">
+                    </div>
+                    <div class="text">
+                        <h3>title</h3>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+                    </div>
+                </div>
+                <div class="row-reverse">
+                    <div class="img">
+                        <img src="https://picsum.photos/100/100/?random=10">
+                    </div>
+                    <div class="text">
+                        <h3>title</h3>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. </p>
+                    </div>
+                </div>
+                <div class="row-reverse">
+                    <div class="img">
+                        <img src="https://picsum.photos/100/100/?random=10">
+                    </div>
+                    <div class="text">
+                        <h3>title</h3>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. </p>
+                    </div>
+                </div>
+            </div>
+            <div class="phone">
+                <img src="https://picsum.photos/319/639/?random=1">
+            </div>
+            <div class="box">
+                <div class="row-default">
+                    <div class="img">
+                        <img src="https://picsum.photos/100/100/?random=10">
+                    </div>
+                    <div class="text">
+                        <h3>title</h3>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. </p>
+                    </div>
+                </div>
+                <div class="row-default">
+                    <div class="img">
+                        <img src="https://picsum.photos/100/100/?random=10">
+                    </div>
+                    <div class="text">
+                        <h3>title</h3>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. </p>
+                    </div>
+                </div>
+                <div class="row-default">
+                    <div class="img">
+                        <img src="https://picsum.photos/100/100/?random=10">
+                    </div>
+                    <div class="text">
+                        <h3>title</h3>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
