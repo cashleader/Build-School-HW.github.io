@@ -5,7 +5,7 @@
 }
 
 /* #region 導覽列 */
-.header {
+header {
     display: flex;
     justify-content: space-between;
     height: 80px;
@@ -16,19 +16,19 @@
     box-shadow: 0 2px 5px #666;
 }
 
-.header .continer {
+header nav {
     display: flex;
     align-items: center;
     justify-content: space-evenly;
     width: 960px;
 }
 
-.header .logo img {
+header .logo img {
     width: 150px;
     height: 50px;
 }
 
-.header .continer a {
+header nav a {
     display: inline-block;
     text-decoration: none;
     color: #000;
@@ -46,7 +46,7 @@
     text-align: center;
 }
 
-.header .free-download a,
+.free-download a,
 .banner .right-now a {
     color: #fff;
     text-decoration: none;
