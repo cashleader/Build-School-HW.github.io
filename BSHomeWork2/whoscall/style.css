@@ -60,12 +60,14 @@
     width: 120px;
 }
 
-/* .banner .notation p {
-width: 200px;
-font-size: 16px;
-margin: auto;
-} */
 .banner .button .notation {
+    width: 200px;
+    margin-left: 15px;
+    text-align: center;
+    color: #2c2;
+    font-weight: 900;
+}
+.banner .button {
     margin-top: 30px;
 }
 
