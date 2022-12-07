@@ -11,6 +11,12 @@ body {
 .highlight{
     background-image: linear-gradient(transparent 50%, #cfc 50%);
 }
+header
+main,
+footer{
+    width: 960px;
+    height: auto ;
+}
 /* #endregion */
 span.green{
     color: #2c2;
@@ -121,7 +127,7 @@ span {
     margin-bottom: 30px;
 }
 
-.banner h1 {
+.banner h2 {
     font-size: 36px;
     line-height: 1.5em;
     font-weight: 900;
