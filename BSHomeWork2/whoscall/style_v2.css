@@ -1,0 +1,394 @@
+/*  #redgion 共同 */
+a {
+    text-decoration: none;
+}
+body {
+    font-family: 'Noto Sans TC', 'Roboto', 'Avenir Next', 'Microsoft JhengHei', '微軟正黑體';
+}
+.note {
+    color: #666;
+    font-weight: bold;
+    padding: 20px;
+    font-size: 14px;
+}
+.highlight{
+    background-image: linear-gradient(transparent 50%, #cfc 50%);
+}
+/* #endregion */
+span.green{
+    color: #2c2;
+}
+/* #region 導覽列 */
+.title{
+    display: none;
+}
+header {
+    display: flex;
+    justify-content: space-between;
+    height: 80px;
+    width: 100%;
+    background-color: #fff;
+    z-index: 1;
+    position: fixed;
+    box-shadow: 0 2px 5px #666;
+}
+nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    width: 900px;
+}
+nav a {
+    display: inline-block;
+    text-decoration: none;
+    color: #000;
+}
+header nav a:hover{
+    color: #2c2;
+    transition: .3s;
+}
+header .logo img{
+    width: 150px;
+    height: auto;
+}
+.download,
+.right-now {
+    font-size: 20px;
+    padding: 10px 35px;
+    margin: 15px;
+    height: 30px;
+    line-height: 1.5em;
+    background-color: #2c2;
+    border-radius: 40px;
+    text-align: center;
+}
+.download a,
+.right-now a {
+    color: #fff;
+    font-weight: bold;
+}
+/* #endregion */
+
+/* #region 電話女孩 */
+.banner .right-now {
+    width: 120px;
+}
+
+.banner .button .notation {
+    width: 200px;
+    margin-left: 15px;
+    text-align: center;
+    color: #2c2;
+    font-weight: 900;
+}
+.banner .button {
+    margin-top: 30px;
+}
+
+span {
+    color: #2c2;
+}
+
+.banner {
+    display: flex;
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    background-size: 100% 100%;
+    background-image: url("圖檔區/valid-number-1440.jpg");
+}
+
+.banner .left-top img {
+    margin-top: 80px;
+}
+
+.banner .right-bottom img {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+}
+
+.banner .title {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 960px;
+    height: 100%;
+    padding-left: 3%;
+}
+
+.banner .title img {
+    width: 500px;
+    height: 70px;
+    margin-bottom: 30px;
+}
+
+.banner h1 {
+    font-size: 36px;
+    line-height: 1.5em;
+    font-weight: 900;
+}
+
+
+/* #endregion */
+
+/* #region 市場 */
+.section-msg {
+    padding: 3em 0;
+}
+.section-msg  .main-title {
+    width: 480px;
+    text-align: center;
+    margin: 0 auto 3em;
+}
+.section-msg  .main-title h2{
+    font-size: 24px;
+    font-weight: 900;
+    line-height: 1.8em;
+}
+.section-msg  .main-title h2 strong {
+    font-size: 36px;
+}
+.section-msg .item-list{
+    width: 960px;
+    margin: auto;
+}
+.msg  .item {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 24px;
+}
+
+.section-msg .item-list .item p:not(.mark p){
+    font-size: 24px;
+    display: block;
+    margin: 20px;
+    line-height: 1.5em;
+    font-weight: bold;
+}
+.msg .item  .item-txt {
+    width: 450px;
+}
+.msg .item h3{
+    font-size: 32px;
+    font-weight: 900;
+    margin: 30px 20px;
+    color: #2c2;
+}
+.msg .item-list .item:nth-child(even) {
+    flex-direction: row-reverse;
+}
+/* #endregion */
+
+/* #region 夥伴*/
+.section-partner .item{
+    width: 320px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+.section-partner .item img{
+    height: auto;
+    width: 145px;
+}      
+.section-partner .item .text{
+    width: 75%;
+}
+.section-partner .item .text h3{
+    font-size: 24px;
+    font-weight: bold;
+    padding: 20px 0 10px;
+}
+.section-partner .item .text p{
+    font-size: 20px;
+}
+.section-partner .item-list{
+    width: 1080px;
+}
+.section-partner , 
+.section-data {
+    padding: 90px 0;
+}
+.section-partner .main-title, 
+.section-share .main-title{
+    text-align: center;
+    width: 960px;
+    margin: 40px auto;
+}
+.section-partner .main-title h2,
+.section-share .main-title h2{
+    font-size: 36px;
+    font-weight: bold;
+}
+.section-partner .item-list,
+.section-share .item-list{
+    display: flex;
+    justify-content: space-evenly;
+    margin: auto;
+    vertical-align: bottom;
+}
+/* #endregion */
+
+/* #region  share*/
+.section-share .item-list {
+    width: 1080px;
+}
+.section-share .item-list .item {
+    width: 320px;
+    border: #ddd .2px solid;
+    border-radius: 3px;
+    box-sizing: border-box;
+    padding: 20px;
+    box-shadow: 0 2px 5px #ddd;
+}
+.section-share .item-list .item h3{
+    font-size: 24px;
+    font-weight: 900;
+    line-height: 1.5em;
+    padding: .75em 0;
+}
+.section-share .item-list .item p,
+.section-share .item-list .item span {
+    line-height: 1.3em;
+    font-weight: bold;
+}
+.section-share .item-list .item .pic img{
+    transform: rotateY(180deg);
+    vertical-align: bottom;
+}
+.section-share .logo {
+    position: relative;
+    padding-bottom: 70px;
+}
+.section-share .logo img{
+    position: absolute;
+    right: 0;
+    bottom: 0;
+}
+/* #endregion */   
+
+/* #region  data*/
+.section-data h2 {
+    padding-top: 25px;
+    text-align: center;
+    font-size: 36px;
+    font-weight: bold;
+}
+
+.section-data strong {
+    font-size: 18px;
+    font-weight: bold;
+    color: #2c2;
+    text-align: center;
+    width: 100%;
+    display: block;
+}
+
+.section-data {
+    display: flex;
+    flex-direction: column;
+    height: 30vh;
+    justify-content: space-evenly;
+}
+
+/* #endregion */
+
+/* #region footer */
+footer {
+    background-color: #334;
+    width: 100%;
+    padding: 40px 30px 0;
+    box-sizing: border-box;
+}
+footer a,
+footer .footer-copyright .text p {
+    text-decoration: none;
+    color: #aaa;
+}
+footer .footer-content {
+    display: flex;
+    justify-content: space-between;
+    height: 45vh;
+    color: #fff;
+    width: 1200px;
+    margin: auto;
+}
+footer .footer-link{
+    display: flex;
+    width: 35%;
+    justify-content: space-between;
+    color: #fff;
+}
+.footer-link .link {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+}
+footer .link li {
+    line-height: 2em;
+    font-weight: bold;
+}
+footer h3 {
+    font-weight: 900;
+    margin: 10px 0;
+}
+footer .footer-social{
+    margin-right: 20px;
+    width: 18%;
+}
+footer .link ul {
+    list-style:none;
+}
+footer .powerBy {
+    margin-top: 40px;
+}
+footer .powerBy p{
+    font-size: 12px;
+}
+footer .powerBy strong {
+    font-size: 24px;
+    line-height: 2em;
+}
+footer .follow ul {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 40px;
+} 
+
+footer .footer-copyright {
+    width: 1200px;
+    margin: auto;
+    display: flex;
+    border-top: 1px solid #fff;
+    padding: 20px 0 40px;
+}
+footer .footer-copyright .text {
+    display: flex;
+}
+footer .footer-copyright .text  a {
+    margin-left: 30px;
+}
+footer a:hover {
+    color: #fff;
+    transition: .3s;
+}
+footer .footer-copyright .lang {
+    margin-left: auto;
+    vertical-align: middle;
+    margin-right: 20px;
+}
+footer .lang select {
+    color: #fff;
+    background-color: #334;
+    font-size: 16px;
+    border: none;
+}
+
+
+
+
+
+
+/* #endregion */ 
