@@ -205,7 +205,7 @@ span {
     font-size: 20px;
 }
 .section-partner .item-list{
-    width: 1080px;
+    width: 960px;
 }
 .section-partner , 
 .section-data {
@@ -302,12 +302,14 @@ footer {
     padding: 40px 30px 0;
     box-sizing: border-box;
 }
+
 footer a,
-footer .footer-copyright .text p {
+footer .copyright .privacy p {
     text-decoration: none;
     color: #aaa;
 }
-footer .footer-content {
+
+footer .wrap {
     display: flex;
     justify-content: space-between;
     height: 45vh;
@@ -315,71 +317,86 @@ footer .footer-content {
     width: 1200px;
     margin: auto;
 }
-footer .footer-link{
+
+footer .texts {
     display: flex;
     width: 35%;
     justify-content: space-between;
     color: #fff;
 }
-.footer-link .link {
+
+footer .texts .item {
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
 }
-footer .link li {
+
+footer .texts li {
     line-height: 2em;
     font-weight: bold;
 }
+
 footer h3 {
     font-weight: 900;
     margin: 10px 0;
 }
-footer .footer-social{
+
+footer .follow {
     margin-right: 20px;
     width: 18%;
 }
-footer .link ul {
-    list-style:none;
-}
-footer .powerBy {
+
+footer .powered-by {
     margin-top: 40px;
 }
-footer .powerBy p{
+
+footer .powered-by p {
     font-size: 12px;
 }
-footer .powerBy strong {
+
+footer .powered-by strong {
     font-size: 24px;
     line-height: 2em;
 }
-footer .follow ul {
+
+footer .logos .icons {
     display: flex;
     justify-content: space-between;
     margin-top: 40px;
-} 
+    height: auto;
+}
 
-footer .footer-copyright {
+footer .copyright {
     width: 1200px;
     margin: auto;
+}
+
+footer .copyright {
     display: flex;
     border-top: 1px solid #fff;
     padding: 20px 0 40px;
 }
-footer .footer-copyright .text {
+
+footer .copyright .privacy {
     display: flex;
 }
-footer .footer-copyright .text  a {
+
+footer .copyright .privacy a {
     margin-left: 30px;
 }
+
 footer a:hover {
     color: #fff;
     transition: .3s;
 }
-footer .footer-copyright .lang {
+
+footer .copyright .language {
     margin-left: auto;
     vertical-align: middle;
     margin-right: 20px;
 }
-footer .lang select {
+
+footer .language select {
     color: #fff;
     background-color: #334;
     font-size: 16px;

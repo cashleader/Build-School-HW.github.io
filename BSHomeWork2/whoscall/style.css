@@ -59,7 +59,7 @@ header nav a {
 }
 
 /* #endregion */
-/* #region 電話女孩 */
+/*  #region 電話女孩 */
 
 .banner .right-now {
     width: 120px;
@@ -119,7 +119,7 @@ span {
     line-height: 1.5em;
     font-weight: 900;
 }
-
+/* #endregion */
 /* #region 圖示區  */
 .content {
     width: 960px;
