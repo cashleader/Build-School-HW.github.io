@@ -1,7 +1,4 @@
 /*  #redgion 共同 */
-a {
-    text-decoration: none;
-}
 body {
     font-family: 'Noto Sans TC', 'Roboto', 'Avenir Next', 'Microsoft JhengHei', '微軟正黑體';
 }
@@ -43,8 +40,9 @@ nav a {
     text-decoration: none;
     color: #000;
 }
+header .download a:hover ,
 header nav a:hover{
-    color: #2c2;
+    color: #01e101;
     transition: .3s;
 }
 header .logo img{
@@ -58,7 +56,7 @@ header .logo img{
     margin: 15px;
     height: 30px;
     line-height: 1.5em;
-    background-color: #2c2;
+    background-color: #00C300;
     border-radius: 40px;
     text-align: center;
 }
@@ -128,7 +126,6 @@ span {
     line-height: 1.5em;
     font-weight: 900;
 }
-
 
 /* #endregion */
 
