@@ -1,0 +1,159 @@
+h1{
+    display: none;
+}
+*{
+    margin: 0;
+    padding: 0;
+}
+
+main{
+    width: 100%;
+    padding: 60px 0;  
+}
+.item{
+    width: 960px;
+    margin: auto;
+    padding: 100px 0;;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+}
+.item .function{
+    width: 350px;
+    position: absolute;
+    z-index: 3;
+    padding: 39px;
+}
+.item:nth-child(even) .function{
+    right: 0px;
+}
+.function .title{
+    display: flex;
+    text-align: center;
+    justify-content: space-evenly;
+    background-color: #bb0404;
+    color: #fff;
+}
+.item:nth-child(even) .function .title{
+    flex-direction: row-reverse;
+    justify-content: space-evenly;
+}
+.function .title span{
+    font-size: 85px;
+    transform: rotate(90deg);
+}
+.function .title h2{
+    display: flex;
+    align-items: center;
+    font-size: 52px;
+}
+.function .text{
+    background-image: url(圖檔區/dot.png);
+    background-color: #000;
+    color: #fff;
+}
+.function .text h3{
+    font-size: 24px;
+    padding: 10px 10px 0px;
+}
+.function .text p{
+    font-size: 18px;
+    line-height: 2;
+    padding: 10px;
+}
+.pic{
+    width: 680px;
+    position: relative;
+    padding-left: 200px;
+    padding-top: 123px;
+    z-index: 2;
+}
+.item:nth-child(even) .pic{
+    padding-left: 0;
+}
+.pic img{
+    width: 100%;
+    vertical-align: middle;
+}
+.item .pic .player{
+    width: 42px;
+    height: 28px;
+    position: absolute;
+    top: 340px;
+    right: -9px;
+}
+.item:nth-child(even) .pic .player{
+    left: -9px;
+}
+.item.pic .player img{
+    width: 100%;
+    vertical-align: middle;
+    z-index: 3;
+}
+.box{
+    width: 440px;
+    height: 290px;
+    background-color: #F2F2F2;
+    position: absolute;
+    top: 145px;
+    right: 0px;
+    z-index: 1;
+}
+.item:nth-child(even) .box{
+    height: 350px;
+    right: 200px;
+    top: 160px;
+}
+.item .project{
+    width: 640px;
+    background-color: #F2F2F2;
+    padding: 20px;
+    position: relative;
+    top: -50px;
+    z-index: 3;
+}
+.item:nth-child(even) .project{
+    left: 200px;
+}
+.project .title{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.project h3{
+    color: #bb0404;
+    display: inline-block;
+    font-size: 20px;
+    font-weight: 700;
+    margin: 10px 0;
+}
+.project .line {
+    background-color: rgb(196, 20, 20);
+    height: 1px;
+    width: 420px;
+}
+.project .content{
+    padding-top: 5px;
+}
+.project .content h4{
+    display: inline-block;
+    font-size: 16px;
+    color: #fff;
+    background: #000;
+    padding: 5px 10px 3px;
+    font-weight: lighter;
+    margin: 10px 0;
+    border-radius: 3px;
+
+}
+.project .content p{
+    color: #717171;
+}
+.project .content .dot::before {
+    content: "▪";
+    color: #bb0404;
+    font-weight: bold;
+    display: inline-block;
+    width: 11px;
+    margin-left: -10px;
+}
