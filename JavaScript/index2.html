@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type="text" id="num-input">
+    <button class="bts">點我點我點我</button>
+    <!-- <button class="bts">拜託</button> -->
+    <span></span>
+    <script>
+        // 去html 抓到input id=num-input
+        let myinput=document.querySelector('#num-input')
+        // myinput 的的value印出來
+        console.log(
+            myinput.value
+        )
+        // 對myinput新增 輸入的(input) 事件監聽 
+        // myinput.addEventListener('input',function(){
+        //     console.log(myinput.value)
+        // })
+        let mybts=document.querySelector('.bts')
+        let myspan=document.querySelector('span')
+        // let mybtss=document.querySelectorAll('.bts')
+
+        // mybts.addEventListener('click',function(){
+        //     console.log(
+        //         // myinput.value
+        //     )
+        // })
+        mybts.addEventListener('click',function(){
+            // TODO:1.抓到input value
+            let tmp=myinput.value
+
+            // TODO:2.把tmp的值 塞進去 sapn
+
+            myspan.innerText=tmp
+        })
+    </script>
+</body>
+</html>

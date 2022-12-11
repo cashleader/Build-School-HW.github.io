@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .waring {
+            color: #0f0;
+        }
+
+        .h1 {
+            font-size: 50px;
+        }
+    </style>
+</head>
+
+<body>
+    <ul id="food" class="foo warning">
+        <li>麵包</li>
+        <li>蛋糕</li>
+    </ul>
+    <input type="text" class="num-input" value="123">
+    <script>
+
+
+        //裡面可以寫JS
+        console.log('hello word')
+
+        let ulDom = document.querySelector('#food')
+        // console.log(ulDom)
+
+        // ulDom.children[0]
+        // console.dir(ulDom.children[0])
+        console.dir(ulDom)
+        // console.dir(ulDom.children[1].innerText)
+
+        // ulDom.children[1].innerText='蘋果汁'
+
+        // 對ul 的class新增waring class
+        ulDom.classList.add('waring')
+        ulDom.classList.remove('h1')
+        ulDom.classList.contains('foo')
+        let numInput = document.querySelector('.num-input')
+        console.log(numInput)
+        console.log(numInput.value)
+    // let myBody=document.querySelector('body')
+
+    </script>
+</body>
+
+</html>
