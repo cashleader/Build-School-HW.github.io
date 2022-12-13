@@ -1,0 +1,99 @@
+.card{
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+    margin-bottom: 15px;
+    width: 100%;
+}
+h3{
+    font-size: 24px;
+    text-align: center;
+}
+.item{
+    outline: 1px solid #66ffe6;
+    box-sizing: border-box;
+    padding: 15px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.item img
+.item .text{
+    width:calc(50%-10px);
+}
+.item .pic img{
+    max-width:100%;
+    vertical-align: middle;
+    border-radius: 5%;
+}
+@media screen and (min-width: 768px){
+    /* 平板 */
+    .wrap{
+        display: flex;
+        flex-wrap: wrap;
+        margin: auto;
+        max-width: 1200px;
+        --col-count:3;
+    }
+    .card{
+        width: calc(100% / var(--col-count));
+    }
+    .item{
+        flex-direction: column;
+    }
+    .item .text,
+    .item img{
+        width: calc(100% - 10px);
+    }
+}
+@media screen and (min-width: 1024px){
+    /* 桌機 */
+    .card{
+        --col-count:4;
+    }
+    .card:nth-child(-n+2){
+        width: 50%;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    .card:nth-child(-n+2):hover{
+        transform: scaleX(1.5);
+    }
+    .card:nth-child(-n+2) .item{
+        flex-direction: row;
+    }
+    .card:nth-child(-n+2) .item .text,
+    .card:nth-child(-n+2) .item img{
+        width: calc(50% - 10px);
+    }
+    .card:nth-child(n+3) .item{
+        display: flex;
+        position: relative;
+    }
+    .card:nth-child(n+3) .text{
+    position: absolute;
+    width: calc(100%-40px);
+    background-color: #fff;
+    margin: auto;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    opacity: 0;
+    width: fit-content;
+    display: flex;
+    justify-content:center;
+    flex-direction: column;
+    word-wrap:break-word;
+
+    }
+    .card:nth-child(n+3) .img{
+        width: 100%;
+        vertical-align: top;
+    }
+    .card:nth-child(n+3) .text:hover{
+        opacity: 1;
+    }
