@@ -1,0 +1,76 @@
+.start{  
+    background-color: rgb(0, 0, 0, .5);
+    width: 100%;
+    height: 100vh;
+    position: absolute;
+    top: 0;
+    display: flex;
+    align-items: center;
+} 
+.startBtn{
+    width: 300px;
+    height: 200px;
+    font-size: 50px;
+    font-weight: 600;
+    color: 	#87CEEB;
+    border: 5px solid #1E90FF;
+    border-radius: 20px;
+}
+.restBtn{
+    width: 300px;
+    height: 200px;
+    font-size: 50px;
+    font-weight: 600;
+    color: 	#87CEEB;
+    border: 5px solid #1E90FF;
+    border-radius: 20px;
+}
+.startBtn:hover,
+.restBtn:hover{
+    top: 2px;
+    right: 2px;
+    background-color:#000080;
+}
+.main{
+    height: 100vh;
+    background-color: #eff0ea;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    box-sizing: border-box;
+    padding: 50px;
+}
+h1{
+    margin: auto;
+    text-align: center;
+    font-size: 36px;
+    font-weight: 900;
+    padding: 10px;
+    margin-top: 60px;
+    color: blue;
+    background-color:#949191;
+    text-shadow: 0px 0px 3px white, 0px 0px 5px white;
+}
+button{
+    /* display: block; */
+    display: inline-block;
+    padding: 15px 25px;
+    font-size: 24px;
+    cursor: pointer;
+    text-align: center;   
+    text-decoration: none;
+    outline: none;
+    color: #fff;
+    background-color: #66ffe6;
+    border: none;
+    border-radius: 15px;
+    box-shadow: 0 9px #999;
+}
+button:hover {
+    background-color: #bffff5;
+}
+button:active {
+    background-color: #0000CD;
+    box-shadow: 0 5px #666;
+    transform: translateY(4px);
+}
