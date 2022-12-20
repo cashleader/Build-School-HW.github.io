@@ -95,8 +95,6 @@ label{
         flex-direction: column;
         width: 100%;
         text-align: center;
-        color: #fff;
-
     }
     .drop-down-menu li > ul {
         position: relative;
