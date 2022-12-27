@@ -2,9 +2,6 @@
   text-transform: uppercase;
 }
 
-:root {
-  font-family: "Roboto", Sans-serif, "Times New Roman";
-}
 :root .mute {
   color: #aaa;
 }
@@ -452,13 +449,13 @@ footer .sub-footer a {
     display: none;
   }
   .article-container .section-projects .cards .card:first-child {
-    background-image: url("./imgsMaikon/project-1.jpg");
+    background-image: url("maikon/project-1.jpg");
   }
   .article-container .section-projects .cards .card:nth-child(2) {
-    background-image: url("./imgsMaikon/project-2.jpg");
+    background-image: url("maikon/project-2.jpg");
   }
   .article-container .section-projects .cards .card:last-child {
-    background-image: url("./imgsMaikon/project-3.jpg");
+    background-image: url("maikon/project-3.jpg");
   }
   .article-container .section-projects .cards .card:active .card-text {
     z-index: 1;
@@ -670,20 +667,20 @@ footer .sub-footer a {
     transform: translateY(50%);
   }
   .article-container .section-steps .step:nth-child(1)::after {
-    content: url("./imgsMaikon/arrow-1.svg");
+    content: url("maikon/arrow-1.svg");
     right: calc(250px + 35%);
   }
   .article-container .section-steps .step:nth-child(2)::after {
-    content: url("./imgsMaikon/arrow-2.svg");
+    content: url("maikon/arrow-2.svg");
     right: calc(220px + 35%);
   }
   .article-container .section-steps .step:nth-child(3)::after {
-    content: url("./imgsMaikon/arrow-3.svg");
+    content: url("maikon/arrow-3.svg");
     right: calc(220px + 35%);
     bottom: -20px;
   }
   .article-container .section-steps .step:nth-child(4)::after {
-    content: url("./imgsMaikon/arrow-4.svg");
+    content: url("maikon/arrow-4.svg");
     right: calc(200px + 35%);
   }
   footer .main-footer .main-footer-item {
