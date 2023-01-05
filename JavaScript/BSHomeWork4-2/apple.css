@@ -1,91 +1,76 @@
-.products .products-list {
-    padding: 10px 0px;
-    width: 200px;
-    background-color: #444;
-    color: #fff;
-    margin: 0 15px;
-    cursor: pointer;
-    -webkit-user-select: none;
-    -moz-user-select: none;
-    -ms-user-select: none;
-    user-select: none;
+.topbar {
+    position: fixed;
+    top: 0;
+    background-color: #fff;
+    z-index: 1;
 }
 
-.products .products-list:active {
-    background-color: #777;
+h1 span{
+    color:#888;
 }
 
-.shop {
-    font-size: 0;
-}
-
-.shop .row {
-    font-size: 16px;
-}
-
-.shop .row .fa-circle.space {
-    color: #b3b6b9;
-}
-
-.shop .row .fa-circle.silver {
-    color: #e0e2e1;
-}
-
-.shop .row .fa-circle.gold {
-    color: #efd1c3;
-}
-
-.shop .row .fa-circle.white {
-    color: #f9f6ef;
-}
-
-.shop .row .fa-circle.black {
-    color: #1f2120;
-}
-
-.shop .row .fa-circle.yellow {
-    color: #ffe681;
-}
-
-.shop .row .fa-circle.purple {
-    color: #d1cddb;
-}
-
-.shop .row p {
-    margin-bottom: 0px;
-}
-
-.shop .row .item {
-    width: 100%;
-    padding: 50px;
-    margin: 15px 15px;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-    -ms-flex-direction: column;
-    flex-direction: column;
-    -webkit-box-pack: center;
-    -ms-flex-pack: center;
-    justify-content: center;
-    -webkit-box-align: center;
-    -ms-flex-align: center;
-    align-items: center;
-    border: 1px solid #aaa;
-    cursor: pointer;
-}
-
-.shop .row .item:hover {
-    border: 1px solid black;
-}
-
-.shop .row input {
+input[type="radio"] {
     display: none;
 }
 
-.shop .row input:checked+.item {
-    border: 1px solid red;
+input[type="radio"]:checked+label {
+    border: 2px solid rgb(84, 84, 250);
+    padding: -2px;
 }
 
-/*# sourceMappingURL=all.css.map */
+.btn-outline-primary {
+    color: #000;
+    border-color: gray;
+}
+
+.btn-outline-primary:hover {
+    color: #000;
+    border-color: gray;
+    background-color: #fff;
+}
+
+.selfbtn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 36px;
+    height: 36px;
+    border: 0px solid #fff;
+    background-color: #fff;
+    border-radius: 50% 50%;
+    margin: 0 2px;
+}
+
+.selfbtn img {
+    padding: 5px;
+}
+
+
+
+.kv-box {
+    margin-top: 50px;
+}
+
+
+
+@media screen and (min-width:768px) {
+    .kv-box {
+        position: relative;
+    }
+
+    .kv {
+        position: fixed;
+        width: 55%;
+        height: 50vh;
+        top: 20%;
+    }
+}
+
+
+@media screen and (min-width:1280px) {
+
+    .kv {
+        width: 50%;
+
+    }
+}
