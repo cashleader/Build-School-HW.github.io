@@ -1,17 +1,37 @@
 let iPadProArray = [
+    //#region  太空黑 wifi
     { id: "A0001", color: "spacegray", storage: "128GB", network: "Wi-Fi", price: 27900, description: "太空灰 128GB Wi-Fi", picture: "./apple/iPadPro/spacegray-1.jpg" },
     { id: "A0002", color: "spacegray", storage: "256GB", network: "Wi-Fi", price: 31400, description: "太空灰 256GB Wi-Fi", picture: "./apple/iPadPro/spacegray-1.jpg" },
     { id: "A0003", color: "spacegray", storage: "512GB", network: "Wi-Fi", price: 38400, description: "太空灰 512GB Wi-Fi", picture: "./apple/iPadPro/spacegray-1.jpg" },
     { id: "A0004", color: "spacegray", storage: "1T", network: "Wi-Fi", price: 52400, description: "太空灰 1T Wi-Fi", picture: "./apple/iPadPro/spacegray-1.jpg" },
     { id: "A0005", color: "spacegray", storage: "2T", network: "Wi-Fi", price: 66400, description: "太空灰 2T Wi-Fi", picture: "./apple/iPadPro/spacegray-1.jpg" },
+    //#endregion
 
-    { id: "A0003", color: "silver", storage: "128GB", network: "5G", price: 32900, description: "銀色 128GB 5G", picture: "./apple/iPadPro/silver-1.jpg" },
-    { id: "A0004", color: "silver", storage: "256GB", network: "5G", price: 36400, description: "銀色 256GB 5G", picture: "./apple/iPadPro/silver-1.jpg" },
-    { id: "A0003", color: "silver", storage: "512GB", network: "5G", price: 43400, description: "銀色 512GB Wi-Fi", picture: "./apple/iPadPro/silver-1.jpg" },
-    { id: "A0004", color: "silver", storage: "1T", network: "5G", price: 57400, description: "銀色 1T Wi-Fi", picture: "./apple/iPadPro/silver-1.jpg" },
-    { id: "A0005", color: "silver", storage: "2T", network: "5G", price: 71400, description: "銀色 2T Wi-Fi", picture: "./apple/iPadPro/silver-1.jpg" }
+    //#region 太空黑 5G
+    { id: "A0006", color: "spacegray", storage: "128GB", network: "5G", price: 32900, description: "太空灰色 128GB 5G", picture: "./apple/iPadPro/spacegray-1.jpg" },
+    { id: "A0007", color: "spacegray", storage: "256GB", network: "5G", price: 36400, description: "太空灰色 256GB 5G", picture: "./apple/iPadPro/spacegray-1.jpg" },
+    { id: "A0008", color: "spacegray", storage: "512GB", network: "5G", price: 43400, description: "太空灰色 512GB 5G", picture: "./apple/iPadPro/spacegray-1.jpg" },
+    { id: "A0009", color: "spacegray", storage: "1T", network: "5G", price: 57400, description: "太空灰色 1T 5G", picture: "./apple/iPadPro/spacegray-1.jpg" },
+    { id: "A0010", color: "spacegray", storage: "2T", network: "5G", price: 71400, description: "太空灰色 2T 5G", picture: "./apple/iPadPro/spacegray-1.jpg" },
+    //#endregion
+
+    //#region  銀色 wifi
+    { id: "A0011", color: "silver", storage: "128GB", network: "Wi-Fi", price: 27900, description: "銀色 128GB Wi-Fi", picture: "./apple/iPadPro/silver-1.jpg" },
+    { id: "A0012", color: "silver", storage: "256GB", network: "Wi-Fi", price: 31400, description: "銀色 256GB Wi-Fi", picture: "./apple/iPadPro/silver-1.jpg" },
+    { id: "A0013", color: "silver", storage: "512GB", network: "Wi-Fi", price: 38400, description: "銀色 512GB Wi-Fi", picture: "./apple/iPadPro/silver-1.jpg" },
+    { id: "A0014", color: "silver", storage: "1T", network: "Wi-Fi", price: 52400, description: "銀色 1T Wi-Fi", picture: "./apple/iPadPro/silver-1.jpg" },
+    { id: "A0015", color: "silver", storage: "2T", network: "Wi-Fi", price: 66400, description: "銀色 2T Wi-Fi", picture: "./apple/iPadPro/silver-1.jpg" },
+    //#endregion
+
+    //#region  銀色 5G
+    { id: "A0016", color: "silver", storage: "128GB", network: "5G", price: 32900, description: "銀色 128GB 5G", picture: "./apple/iPadPro/silver-1.jpg" },
+    { id: "A0017", color: "silver", storage: "256GB", network: "5G", price: 36400, description: "銀色 256GB 5G", picture: "./apple/iPadPro/silver-1.jpg" },
+    { id: "A0018", color: "silver", storage: "512GB", network: "5G", price: 43400, description: "銀色 512GB 5G", picture: "./apple/iPadPro/silver-1.jpg" },
+    { id: "A0019", color: "silver", storage: "1T", network: "5G", price: 57400, description: "銀色 1T 5G", picture: "./apple/iPadPro/silver-1.jpg" },
+    { id: "A0020", color: "silver", storage: "2T", network: "5G", price: 71400, description: "銀色 2T 5G", picture: "./apple/iPadPro/silver-1.jpg" }
+    // #endregion
+
 ]
-
 let iPhoneArray = [
     { id: "B0001", color: "blue", storage: "128GB", price: 27900, description: "藍色 128GB iPhone", picture: "./apple/iPhone/colors_plus/blue.jpg", tag: "no" },
     { id: "B0002", color: "blue", storage: "256GB", price: 31400, description: "藍色 256GB iPhone", picture: "./apple/iPhone/colors_plus/blue.jpg", tag: "no" },
@@ -102,7 +122,7 @@ let storageList = document.getElementsByName("storage");
 let iphoneList = document.getElementsByName("iphone");
 let netList = document.getElementsByName("net");
 let selectediPhone = "";
-let btnarea = document.querySelector('.btnara');
+let btnarea = document.querySelector('.btnarea')
 
 
 function createiPhone14() {
@@ -110,13 +130,13 @@ function createiPhone14() {
     picturecontent.innerHTML = `
     <div class="carousel-inner">
                         <div class="carousel-item active">
-                            <img src="./apple/iPhone/colors/blue.jpg" class="d-block w-100" alt="...">
+                            <img src="./apple/iPhone/colors/blue.jpg" class="d-block w-50" alt="...">
                         </div>
                         <div class="carousel-item">
-                            <img src="./apple/iPhone/colors/blue_2.jpg" class="d-block w-100" alt="...">
+                            <img src="./apple/iPhone/colors/blue_2.jpg" class="d-block w-50" alt="...">
                         </div>
                         <div class="carousel-item">
-                            <img src="./apple/iPhone/colors/blue_3.jpg" class="d-block w-100" alt="...">
+                            <img src="./apple/iPhone/colors/blue_3.jpg" class="d-block w-50" alt="...">
                         </div>
                     </div>`
 
@@ -155,7 +175,6 @@ function createiPhone14() {
     showcontent.innerHTML = "";
     btnarea.innerHTML = `<button type="button" class="btn btn-secondary show" onclick="showiPhonePrice()">查看價格</button>`;
 }
-
 function createiPhone14Pro() {
     picturecontent.innerHTML = "";
     picturecontent.innerHTML = `
@@ -173,8 +192,8 @@ function createiPhone14Pro() {
 
     product.innerHTML = "";
     product.innerHTML = `<h1>機型。 <span> 哪一款最適合你？</span></h1>
-                <input type="radio" id="iPhone14Pro" name="iphone" class="radiobtn" onclick="chooseiPhone()"><label for="iPhone14Pro" class="btn btn-outline-primary w-100 mt-3 mb-3 btntxt">iPhone 14 Pro</label>
-                <input type="radio" id="iPhone14ProMax" name="iphone" class="radiobtn" onclick="chooseiPhone()"><label for="iPhone14ProMax" class="btn btn-outline-primary w-100 mt-3 mb-3 btntxt">iPhone 14 Pro Max</label>
+                <input type="radio" id="iPhone14Pro" name="iphone" class="radiobtn" onclick="chooseiPhone()"><label for="iPhone14Pro" class="btn btn-outline-primary w-50 mt-3 mb-3 btntxt">iPhone 14 Pro</label>
+                <input type="radio" id="iPhone14ProMax" name="iphone" class="radiobtn" onclick="chooseiPhone()"><label for="iPhone14ProMax" class="btn btn-outline-primary w-50 mt-3 mb-3 btntxt">iPhone 14 Pro Max</label>
     `;
 
     color.innerHTML = "";
@@ -198,48 +217,51 @@ function createiPhone14Pro() {
     showcontent.innerHTML = "";
     btnarea.innerHTML = `<button type="button" class="btn btn-secondary show" onclick="showiPhoneProPrice()">查看價格</button>`;
 }
-
 function createiPadPro11() {
     picturecontent.innerHTML = "";
     picturecontent.innerHTML = `
     <div class="carousel-inner">
                         <div class="carousel-item active">
-                            <img src="./apple/iPadPro/ipad-1.jpg" class="d-block w-50" alt="...">
+                            <img src="./apple/iPadPro/spacegray-1.jpg" class="d-block w-50" alt="...">
                         </div>
-                        <div class="carousel-item active">
-                            <img src="./apple/iPadPro/ipad-1.jpg" class="d-block w-50" alt="...">
+                        <div class="carousel-item">
+                            <img src="./apple/iPadPro/spacegray-2.jpg" class="d-block w-50" alt="...">
+                        </div>
+                        <div class="carousel-item">
+                            <img src="./apple/iPadPro/spacegray-3.jpg" class="d-block w-50" alt="...">
                         </div>
                     </div>`
 
     product.innerHTML = "";
 
-
     color.innerHTML = "";
     color.innerHTML = `<h1>外觀。<span> 挑選喜愛的顏色。</span></h1>
                 <div class="button-box d-flex flex-wrap">
-                    <input type="radio" id="spacegray" name="color" class="radiobtn " onclick=" chooseiPadProColor()"><label class="selfbtn" for="spacegray"><img class="w-100" src="./apple/iPadPro/btn-3.jpg" alt=""></label>
-                    <input type="radio" id="star" name="color" class="radiobtn " onclick="chooseiPadAirColor()"><label class="selfbtn" for="star"><img class="w-100" src="./apple/iPadPro/btn-4.jpg" alt=""></label>
+                    <input type="radio" id="spacegray" name="color" class="radiobtn " onclick="chooseiPadProColor()"><label class="selfbtn" for="spacegray"><img class="w-100" src="./apple/iPadPro/btn-4.jpg" alt=""></label>
+                    <input type="radio" id="silver" name="color" class="radiobtn " onclick="chooseiPadProColor()"><label class="selfbtn" for="star"><img class="w-100" src="./apple/iPadPro/btn-3.jpg" alt=""></label>
                 </div>`
 
     storage.innerHTML = "";
     storage.innerHTML = `<h1>儲存裝置。 <span> 選擇需要的儲存空間？</span></h1>
-                <input type="radio" id="s64GB" name="storage" class="radiobtn " onclick="chooseStorage()"><label for="s64GB" class="btn btn-outline-primary w-100 mt-3 mb-3">64GB</label>
-
+                <input type="radio" id="s128GB" name="storage" class="radiobtn " onclick="chooseStorage()"><label for="s128GB" class="btn btn-outline-primary w-100 mt-3 mb-3">128GB</label>
                 <input type="radio" id="s256GB" name="storage" class="radiobtn " onclick="chooseStorage()"><label for="s256GB"class="btn btn-outline-primary w-100 mt-3 mb-3">256GB</label>
-
                 <input type="radio" id="s512GB" name="storage" class="radiobtn " onclick="chooseStorage()"><label for="s512GB"class="btn btn-outline-primary w-100 mt-3 mb-3">512GB</label>
-
                 <input type="radio" id="s1T" name="storage" class="radiobtn " onclick="chooseStorage()"><label for="s1T"class="btn btn-outline-primary w-100 mt-3 mb-3">1T</label>
+                <input type="radio" id="s2T" name="storage" class="radiobtn " onclick="chooseStorage()"><label for="s2T"class="btn btn-outline-primary w-100 mt-3 mb-3">2T</label>
+                
+`
 
-                <input type="radio" id="s2T" name="storage" class="radiobtn " onclick="chooseStorage()"><label for="s2T"class="btn btn-outline-primary w-100 mt-3 mb-3">2T</label>`
     network.innerHTML = "";
     network.innerHTML = `<h1>連線能力。 <span> 選擇連線方式</span></h1>
                 <input type="radio" id="WiFi" name="net" class="radiobtn " onclick="chooseNet()"><label for="WiFi" class="btn btn-outline-primary w-100 mt-3 mb-3">Wi-Fi</label>
-                <input type="radio" id="WiFi5G" name="net" class="radiobtn " onclick="chooseNet()"><label for="WiFi5G" class="btn btn-outline-primary w-100 mt-3 mb-3">Wi-Fi + 行動網路</label>`
+                <input type="radio" id="WiFi5G" name="net" class="radiobtn " onclick="chooseNet()"><label for="WiFi5G" class="btn btn-outline-primary w-100 mt-3 mb-3">Wi-Fi + 行動網路</label>
+                
+`
     showcontent.innerHTML = "";
     btnarea.innerHTML = `<button type="button" class="btn btn-secondary show" onclick="showiPadProPrice()">查看價格</button>`;
 
 }
+
 function chooseiPhoneColor() {
     for (i = 0; i < colorList.length; i++) {
         if (colorList[i].checked) {
@@ -261,15 +283,70 @@ function chooseiPhoneColor() {
                         </div>
                     </div>`
 }
+function chooseiPhoneProColor() {
+    for (i = 0; i < colorList.length; i++) {
+        if (colorList[i].checked) {
+            selectedColor = colorList[i].id;
+            console.log(selectedColor);
+        }
+    }
+    picturecontent.innerHTML = "";
+    picturecontent.innerHTML = `
+    <div class="carousel-inner">
+                        <div class="carousel-item active">
+                            <img src="./apple/iPhonePro/colors/${selectedColor}.jpg" class="d-block w-50" alt="...">
+                        </div>
+                        <div class="carousel-item">
+                            <img src="./apple/iPhonePro/colors/${selectedColor}_2.jpg" class="d-block w-50" alt="...">
+                        </div>
+                        <div class="carousel-item">
+                            <img src="./apple/iPhonePro/colors/${selectedColor}_3.jpg" class="d-block w-50" alt="...">
+                        </div>
+                    </div>`
+}
+function chooseiPadProColor() {
+
+    for (i = 0; i < colorList.length; i++) {
+        if (colorList[i].checked) {
+            selectedColor = colorList[i].id;
+            console.log(selectedColor);
+        }
+    }
+    picturecontent.innerHTML = "";
+    picturecontent.innerHTML = `
+    <div class="carousel-inner">
+                        <div class="carousel-item active">
+                            <img src="./apple/iPadPro/colors/${selectedColor}-1.jpg" class="d-block w-100" alt="...">
+                        </div>
+                        <div class="carousel-item">
+                            <img src="../apple/iPadPro/colors/${selectedColor}-2.jpg" class="d-block w-100" alt="...">
+                        </div>
+                        <div class="carousel-item">
+                            <img src="../apple/iPadPro/colors/${selectedColor}-3.jpg" class="d-block w-100" alt="...">
+                        </div>
+                    </div>`
+}
+
 function chooseStorage() {
     for (i = 0; i < storageList.length; i++) {
         if (storageList[i].checked) {
             selectedStorage = storageList[i].id;
             selectedStorage = selectedStorage.replace("s", "");
+            console.log(selectedStorage);
         }
     }
 }
 
+function chooseiPhone() {
+    // let AcolorArray=["spacegray","blue","pink","purple","star","midnight","red","darkpurple","gold","silver","spaceblack"];
+    for (i = 0; i < iphoneList.length; i++) {
+        if (iphoneList[i].checked) {
+            selectediPhoneType = iphoneList[i].id;
+            console.log(selectediPhoneType);
+        }
+    }
+
+}
 function chooseNet() {
     for (i = 0; i < netList.length; i++) {
         if (netList[i].checked) {
@@ -278,6 +355,7 @@ function chooseNet() {
         }
     }
 }
+
 
 function showiPhonePrice() {
     showcontent.innerHTML = "";
@@ -297,5 +375,41 @@ function showiPhonePrice() {
 
     showcontent.appendChild(text);
 }
+function showiPhoneProPrice() {
+    showcontent.innerHTML = "";
+    if (selectedColor == "" || selectedStorage == "" || selectediPhoneType == "") {
+        alert("尚有種類 容量 或顏色沒有選擇");
+    }
+    if (selectediPhoneType.includes('Max')) {
+        selectediPhone = iPhoneProArray.filter(x => x.color == selectedColor && x.storage == selectedStorage && x.tag == 'Max');
+    }
+    else {
+        selectediPhone = iPhoneProArray.filter(x => x.color == selectedColor && x.storage == selectedStorage && x.tag == 'no');
+    }
+    let showprice = selectediPhone[0].price;
+    console.log(showprice);
+    let text = document.createElement("div");
+    console.log(des)
+    let des = selectediPhone[0].description;
+    text.innerHTML = `<h1>您選購的產品為${des} <br>價格為 ${showprice} 元</h1>`;
 
+    showcontent.appendChild(text);
+}
+function showiPadProPrice() {
+    showcontent.innerHTML = "";
+    if (selectedColor == "" || selectedStorage == "" || selectednet == "") {
+        alert("尚有種類 容量 或顏色沒有選擇");
+    }
+    if (selectednet.includes('5G')) {
+        selectediPhone = iPadProArray.filter(x => x.color == selectedColor && x.storage == selectedStorage && x.network == '5G');
+    }
+    else {
+        selectediPhone = iPadProArray.filter(x => x.color == selectedColor && x.storage == selectedStorage && x.network == 'Wi-Fi');
+    }
+    let showprice = selectediPhone[0].price;
+    let des = selectediPhone[0].description;
+    let text = document.createElement("div");
+    text.innerHTML = `<h1>您選購的產品為 iPad Pro 11吋${des} <br> 價格為 ${showprice} 元</h1>`;
 
+    showcontent.appendChild(text);
+}

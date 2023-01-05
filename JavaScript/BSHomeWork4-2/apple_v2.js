@@ -256,6 +256,7 @@ function createiPadAir5() {
 
 }
 
+
 function chooseiPhoneColor() {
     // let AcolorArray=["spacegray","blue","pink","purple","star","midnight","red","darkpurple","gold","silver","spaceblack"];
     for (i = 0; i < colorList.length; i++) {
