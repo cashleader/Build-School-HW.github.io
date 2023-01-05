@@ -1,3 +1,8 @@
+window.onload = function () {
+
+
+
+}
 let iPadAirArray = [
     { id: "A0001", color: "spacegray", storage: "64GB", network: "Wi-Fi", price: 19900, description: "太空灰 64GB Wi-Fi", picture: "spacegray.jpg" },
     { id: "A0002", color: "spacegray", storage: "256GB", network: "Wi-Fi", price: 24900, description: "太空灰 256GB Wi-Fi", picture: "spacegray.jpg" },
@@ -256,7 +261,6 @@ function createiPadAir5() {
 
 }
 
-
 function chooseiPhoneColor() {
     // let AcolorArray=["spacegray","blue","pink","purple","star","midnight","red","darkpurple","gold","silver","spaceblack"];
     for (i = 0; i < colorList.length; i++) {
@@ -325,6 +329,12 @@ function chooseiPadAirColor() {
                         </div>
                     </div>`
 }
+
+
+
+
+
+
 
 function chooseStorage() {
     // let AcolorArray=["spacegray","blue","pink","purple","star","midnight","red","darkpurple","gold","silver","spaceblack"];

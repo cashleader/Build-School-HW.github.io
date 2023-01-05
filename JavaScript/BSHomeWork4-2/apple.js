@@ -128,47 +128,47 @@ let btnarea = document.querySelector('.btnarea')
 function createiPhone14() {
     picturecontent.innerHTML = "";
     picturecontent.innerHTML = `
-    <div class="carousel-inner">
-                        <div class="carousel-item active">
-                            <img src="./apple/iPhone/colors/blue.jpg" class="d-block w-50" alt="...">
-                        </div>
-                        <div class="carousel-item">
-                            <img src="./apple/iPhone/colors/blue_2.jpg" class="d-block w-50" alt="...">
-                        </div>
-                        <div class="carousel-item">
-                            <img src="./apple/iPhone/colors/blue_3.jpg" class="d-block w-50" alt="...">
-                        </div>
-                    </div>`
+<div class="carousel-inner">
+                <div class="carousel-item active">
+                    <img src="./apple/iPhone/colors/blue.jpg" class="d-block w-50" alt="...">
+                </div>
+                <div class="carousel-item">
+                    <img src="./apple/iPhone/colors/blue_2.jpg" class="d-block w-50" alt="...">
+                </div>
+                <div class="carousel-item">
+                    <img src="./apple/iPhone/colors/blue_3.jpg" class="d-block w-50" alt="...">
+                </div>
+            </div>`
 
     product.innerHTML = "";
     product.innerHTML = `<h1>機型。 <span> 哪一款最適合你？</span></h1>
-                <input type="radio" id="iPhone14" name="iphone" class="radiobtn" onclick="chooseiPhone()"><label for="iPhone14" class="btn btn-outline-primary w-100 mt-3 mb-3 btntxt">iPhone 14</label>
-                <input type="radio" id="iPhone14Plus" name="iphone" class="radiobtn" onclick="chooseiPhone()"><label for="iPhone14Plus" class="btn btn-outline-primary w-100 mt-3 mb-3 btntxt">iPhone 14 Plus</label>
-    `;
+        <input type="radio" id="iPhone14" name="iphone" class="radiobtn" onclick="chooseiPhone()"><label for="iPhone14" class="btn btn-outline-primary w-100 mt-3 mb-3 btntxt">iPhone 14</label>
+        <input type="radio" id="iPhone14Plus" name="iphone" class="radiobtn" onclick="chooseiPhone()"><label for="iPhone14Plus" class="btn btn-outline-primary w-100 mt-3 mb-3 btntxt">iPhone 14 Plus</label>
+`;
 
     color.innerHTML = "";
     color.innerHTML = `<h1>外觀。<span> 挑選你喜愛的外觀。</span></h1>
-                <div class="button-box d-flex flex-wrap">
-                    <input type="radio" id="blue" name="color" class="radiobtn" onclick="chooseiPhoneColor()"><label class="selfbtn"
-                        for="blue"><img class="w-100" src="./apple/iPhone/btn1.jpg" alt=""></label>
-                    <input type="radio" id="purple" name="color" class="radiobtn" onclick="chooseiPhoneColor()"><label class="selfbtn"
-                        for="purple"><img class="w-100" src="./apple/iPhone/btn2.jpg" alt=""></label>
-                    <input type="radio" id="midnight" name="color" class="radiobtn" onclick="chooseiPhoneColor()"><label class="selfbtn"
-                        for="midnight"><img class="w-100" src="./apple/iPhone/btn3.jpg" alt=""></label>
-                    <input type="radio" id="star" name="color" class="radiobtn" onclick="chooseiPhoneColor()"><label class="selfbtn"
-                        for="star"><img class="w-100" src="./apple/iPhone/btn4.jpg" alt=""></label>
-                    <input type="radio" id="red" name="color" class="radiobtn" onclick="chooseiPhoneColor()"><label class="selfbtn"
-                        for="red"><img class="w-100" src="./apple/iPhone/btn5.jpg" alt=""></label>
-                </div>`
+        <div class="button-box d-flex flex-wrap">
+            <input type="radio" id="blue" name="color" class="radiobtn" onclick="chooseiPhoneColor()"><label class="selfbtn"
+                for="blue"><img class="w-100" src="./apple/iPhone/btn1.jpg" alt=""></label>
+            <input type="radio" id="purple" name="color" class="radiobtn" onclick="chooseiPhoneColor()"><label class="selfbtn"
+                for="purple"><img class="w-100" src="./apple/iPhone/btn2.jpg" alt=""></label>
+            <input type="radio" id="midnight" name="color" class="radiobtn" onclick="chooseiPhoneColor()"><label class="selfbtn"
+                for="midnight"><img class="w-100" src="./apple/iPhone/btn3.jpg" alt=""></label>
+            <input type="radio" id="star" name="color" class="radiobtn" onclick="chooseiPhoneColor()"><label class="selfbtn"
+                for="star"><img class="w-100" src="./apple/iPhone/btn4.jpg" alt=""></label>
+            <input type="radio" id="red" name="color" class="radiobtn" onclick="chooseiPhoneColor()"><label class="selfbtn"
+                for="red"><img class="w-100" src="./apple/iPhone/btn5.jpg" alt=""></label>
+        </div>`
 
     storage.innerHTML = "";
     storage.innerHTML = `     <h1>儲存裝置。 <span> 你需要多少儲存空間？</span></h1>
-                <input type="radio" id="s128GB" name="storage" class="radiobtn " onclick="chooseStorage()"><label for="s128GB"
-                    class="btn btn-outline-primary w-100 mt-3 mb-3">128GB</label>
-                <input type="radio" id="s256GB" name="storage" class="radiobtn " onclick="chooseStorage()"><label for="s256GB"
-                    class="btn btn-outline-primary w-100 mt-3 mb-3">256GB</label>
-                <input type="radio" id="s512GB" name="storage" class="radiobtn " onclick="chooseStorage()"><label for="s512GB"
-                    class="btn btn-outline-primary w-100 mt-3 mb-3">512GB</label>
+        <input type="radio" id="s128GB" name="storage" class="radiobtn " onclick="chooseStorage()"><label for="s128GB"
+            class="btn btn-outline-primary w-100 mt-3 mb-3">128GB</label>
+        <input type="radio" id="s256GB" name="storage" class="radiobtn " onclick="chooseStorage()"><label for="s256GB"
+            class="btn btn-outline-primary w-100 mt-3 mb-3">256GB</label>
+        <input type="radio" id="s512GB" name="storage" class="radiobtn " onclick="chooseStorage()"><label for="s512GB"
+            class="btn btn-outline-primary w-100 mt-3 mb-3">512GB</label>
 `
 
     network.innerHTML = "";
@@ -178,39 +178,39 @@ function createiPhone14() {
 function createiPhone14Pro() {
     picturecontent.innerHTML = "";
     picturecontent.innerHTML = `
-    <div class="carousel-inner">
-                        <div class="carousel-item active">
-                            <img src="./apple/iPhonePro/colors/darkpurple.jpg" class="d-block w-50" alt="...">
-                        </div>
-                        <div class="carousel-item">
-                            <img src="./apple/iPhonePro/colors/darkpurple_2.jpg" class="d-block w-50" alt="...">
-                        </div>
-                        <div class="carousel-item">
-                            <img src="./apple/iPhonePro/colors/darkpurple_3.jpg" class="d-block w-50" alt="...">
-                        </div>
-                    </div>`
+<div class="carousel-inner">
+                <div class="carousel-item active">
+                    <img src="./apple/iPhonePro/colors/darkpurple.jpg" class="d-block w-50" alt="...">
+                </div>
+                <div class="carousel-item">
+                    <img src="./apple/iPhonePro/colors/darkpurple_2.jpg" class="d-block w-50" alt="...">
+                </div>
+                <div class="carousel-item">
+                    <img src="./apple/iPhonePro/colors/darkpurple_3.jpg" class="d-block w-50" alt="...">
+                </div>
+            </div>`
 
     product.innerHTML = "";
     product.innerHTML = `<h1>機型。 <span> 哪一款最適合你？</span></h1>
-                <input type="radio" id="iPhone14Pro" name="iphone" class="radiobtn" onclick="chooseiPhone()"><label for="iPhone14Pro" class="btn btn-outline-primary w-50 mt-3 mb-3 btntxt">iPhone 14 Pro</label>
-                <input type="radio" id="iPhone14ProMax" name="iphone" class="radiobtn" onclick="chooseiPhone()"><label for="iPhone14ProMax" class="btn btn-outline-primary w-50 mt-3 mb-3 btntxt">iPhone 14 Pro Max</label>
-    `;
+        <input type="radio" id="iPhone14Pro" name="iphone" class="radiobtn" onclick="chooseiPhone()"><label for="iPhone14Pro" class="btn btn-outline-primary w-50 mt-3 mb-3 btntxt">iPhone 14 Pro</label>
+        <input type="radio" id="iPhone14ProMax" name="iphone" class="radiobtn" onclick="chooseiPhone()"><label for="iPhone14ProMax" class="btn btn-outline-primary w-50 mt-3 mb-3 btntxt">iPhone 14 Pro Max</label>
+`;
 
     color.innerHTML = "";
     color.innerHTML = `<h1>外觀。<span> 挑選你喜愛的外觀。</span></h1>
-                <div class="button-box d-flex flex-wrap">
-                    <input type="radio" id="darkpurple" name="color" class="radiobtn " onclick="chooseiPhoneProColor()"><label class="selfbtn" for="darkpurple"><img class="w-100" src="./apple/iPhonePro/btn1.jpg" alt=""></label>
-                    <input type="radio" id="gold" name="color" class="radiobtn " onclick="chooseiPhoneProColor()"><label class="selfbtn" for="gold"><img class="w-100" src="./apple/iPhonePro/btn2.jpg" alt=""></label>
-                    <input type="radio" id="silver" name="color" class="radiobtn " onclick="chooseiPhoneProColor()"><label class="selfbtn" for="silver"><img class="w-100" src="./apple/iPhonePro/btn3.jpg" alt=""></label>
-                    <input type="radio" id="spaceblack" name="color" class="radiobtn " onclick="chooseiPhoneProColor()"><label class="selfbtn" for="spaceblack"><img class="w-100" src="./apple/iPhonePro/btn4.jpg" alt=""></label>
-                </div>`
+        <div class="button-box d-flex flex-wrap">
+            <input type="radio" id="darkpurple" name="color" class="radiobtn " onclick="chooseiPhoneProColor()"><label class="selfbtn" for="darkpurple"><img class="w-100" src="./apple/iPhonePro/btn1.jpg" alt=""></label>
+            <input type="radio" id="gold" name="color" class="radiobtn " onclick="chooseiPhoneProColor()"><label class="selfbtn" for="gold"><img class="w-100" src="./apple/iPhonePro/btn2.jpg" alt=""></label>
+            <input type="radio" id="silver" name="color" class="radiobtn " onclick="chooseiPhoneProColor()"><label class="selfbtn" for="silver"><img class="w-100" src="./apple/iPhonePro/btn3.jpg" alt=""></label>
+            <input type="radio" id="spaceblack" name="color" class="radiobtn " onclick="chooseiPhoneProColor()"><label class="selfbtn" for="spaceblack"><img class="w-100" src="./apple/iPhonePro/btn4.jpg" alt=""></label>
+        </div>`
 
     storage.innerHTML = "";
     storage.innerHTML = `<h1>儲存裝置。 <span> 你需要多少儲存空間？</span></h1>
-                <input type="radio" id="s128GB" name="storage" class="radiobtn " onclick="chooseStorage()"><label for="s128GB" class="btn btn-outline-primary w-100 mt-3 mb-3">128GB</label>
-                <input type="radio" id="s256GB" name="storage" class="radiobtn " onclick="chooseStorage()"><label for="s256GB"class="btn btn-outline-primary w-100 mt-3 mb-3">256GB</label>
-                <input type="radio" id="s512GB" name="storage" class="radiobtn " onclick="chooseStorage()"><label for="s512GB"class="btn btn-outline-primary w-100 mt-3 mb-3">512GB</label>
-                <input type="radio" id="s1TB" name="storage" class="radiobtn " onclick="chooseStorage()"><label for="s1TB"class="btn btn-outline-primary w-100 mt-3 mb-3">1TB</label>
+        <input type="radio" id="s128GB" name="storage" class="radiobtn " onclick="chooseStorage()"><label for="s128GB" class="btn btn-outline-primary w-100 mt-3 mb-3">128GB</label>
+        <input type="radio" id="s256GB" name="storage" class="radiobtn " onclick="chooseStorage()"><label for="s256GB"class="btn btn-outline-primary w-100 mt-3 mb-3">256GB</label>
+        <input type="radio" id="s512GB" name="storage" class="radiobtn " onclick="chooseStorage()"><label for="s512GB"class="btn btn-outline-primary w-100 mt-3 mb-3">512GB</label>
+        <input type="radio" id="s1TB" name="storage" class="radiobtn " onclick="chooseStorage()"><label for="s1TB"class="btn btn-outline-primary w-100 mt-3 mb-3">1TB</label>
 `
 
     network.innerHTML = "";
@@ -220,42 +220,42 @@ function createiPhone14Pro() {
 function createiPadPro11() {
     picturecontent.innerHTML = "";
     picturecontent.innerHTML = `
-    <div class="carousel-inner">
-                        <div class="carousel-item active">
-                            <img src="./apple/iPadPro/spacegray-1.jpg" class="d-block w-50" alt="...">
-                        </div>
-                        <div class="carousel-item">
-                            <img src="./apple/iPadPro/spacegray-2.jpg" class="d-block w-50" alt="...">
-                        </div>
-                        <div class="carousel-item">
-                            <img src="./apple/iPadPro/spacegray-3.jpg" class="d-block w-50" alt="...">
-                        </div>
-                    </div>`
+<div class="carousel-inner">
+                <div class="carousel-item active">
+                    <img src="./apple/iPadPro/spacegray-1.jpg" class="d-block w-50" alt="...">
+                </div>
+                <div class="carousel-item">
+                    <img src="./apple/iPadPro/spacegray-2.jpg" class="d-block w-50" alt="...">
+                </div>
+                <div class="carousel-item">
+                    <img src="./apple/iPadPro/spacegray-3.jpg" class="d-block w-50" alt="...">
+                </div>
+            </div>`
 
     product.innerHTML = "";
 
     color.innerHTML = "";
     color.innerHTML = `<h1>外觀。<span> 挑選喜愛的顏色。</span></h1>
-                <div class="button-box d-flex flex-wrap">
-                    <input type="radio" id="spacegray" name="color" class="radiobtn " onclick="chooseiPadProColor()"><label class="selfbtn" for="spacegray"><img class="w-100" src="./apple/iPadPro/btn-4.jpg" alt=""></label>
-                    <input type="radio" id="silver" name="color" class="radiobtn " onclick="chooseiPadProColor()"><label class="selfbtn" for="star"><img class="w-100" src="./apple/iPadPro/btn-3.jpg" alt=""></label>
-                </div>`
+        <div class="button-box d-flex flex-wrap">
+            <input type="radio" id="spacegray" name="color" class="radiobtn " onclick="chooseiPadProColor()"><label class="selfbtn" for="spacegray"><img class="w-100" src="./apple/iPadPro/btn-4.jpg" alt=""></label>
+            <input type="radio" id="silver" name="color" class="radiobtn " onclick="chooseiPadProColor()"><label class="selfbtn" for="star"><img class="w-100" src="./apple/iPadPro/btn-3.jpg" alt=""></label>
+        </div>`
 
     storage.innerHTML = "";
     storage.innerHTML = `<h1>儲存裝置。 <span> 選擇需要的儲存空間？</span></h1>
-                <input type="radio" id="s128GB" name="storage" class="radiobtn " onclick="chooseStorage()"><label for="s128GB" class="btn btn-outline-primary w-100 mt-3 mb-3">128GB</label>
-                <input type="radio" id="s256GB" name="storage" class="radiobtn " onclick="chooseStorage()"><label for="s256GB"class="btn btn-outline-primary w-100 mt-3 mb-3">256GB</label>
-                <input type="radio" id="s512GB" name="storage" class="radiobtn " onclick="chooseStorage()"><label for="s512GB"class="btn btn-outline-primary w-100 mt-3 mb-3">512GB</label>
-                <input type="radio" id="s1T" name="storage" class="radiobtn " onclick="chooseStorage()"><label for="s1T"class="btn btn-outline-primary w-100 mt-3 mb-3">1T</label>
-                <input type="radio" id="s2T" name="storage" class="radiobtn " onclick="chooseStorage()"><label for="s2T"class="btn btn-outline-primary w-100 mt-3 mb-3">2T</label>
-                
+        <input type="radio" id="s128GB" name="storage" class="radiobtn " onclick="chooseStorage()"><label for="s128GB" class="btn btn-outline-primary w-100 mt-3 mb-3">128GB</label>
+        <input type="radio" id="s256GB" name="storage" class="radiobtn " onclick="chooseStorage()"><label for="s256GB"class="btn btn-outline-primary w-100 mt-3 mb-3">256GB</label>
+        <input type="radio" id="s512GB" name="storage" class="radiobtn " onclick="chooseStorage()"><label for="s512GB"class="btn btn-outline-primary w-100 mt-3 mb-3">512GB</label>
+        <input type="radio" id="s1T" name="storage" class="radiobtn " onclick="chooseStorage()"><label for="s1T"class="btn btn-outline-primary w-100 mt-3 mb-3">1T</label>
+        <input type="radio" id="s2T" name="storage" class="radiobtn " onclick="chooseStorage()"><label for="s2T"class="btn btn-outline-primary w-100 mt-3 mb-3">2T</label>
+        
 `
 
     network.innerHTML = "";
     network.innerHTML = `<h1>連線能力。 <span> 選擇連線方式</span></h1>
-                <input type="radio" id="WiFi" name="net" class="radiobtn " onclick="chooseNet()"><label for="WiFi" class="btn btn-outline-primary w-100 mt-3 mb-3">Wi-Fi</label>
-                <input type="radio" id="WiFi5G" name="net" class="radiobtn " onclick="chooseNet()"><label for="WiFi5G" class="btn btn-outline-primary w-100 mt-3 mb-3">Wi-Fi + 行動網路</label>
-                
+        <input type="radio" id="WiFi" name="net" class="radiobtn " onclick="chooseNet()"><label for="WiFi" class="btn btn-outline-primary w-100 mt-3 mb-3">Wi-Fi</label>
+        <input type="radio" id="WiFi5G" name="net" class="radiobtn " onclick="chooseNet()"><label for="WiFi5G" class="btn btn-outline-primary w-100 mt-3 mb-3">Wi-Fi + 行動網路</label>
+        
 `
     showcontent.innerHTML = "";
     btnarea.innerHTML = `<button type="button" class="btn btn-secondary show" onclick="showiPadProPrice()">查看價格</button>`;
@@ -271,17 +271,17 @@ function chooseiPhoneColor() {
     }
     picturecontent.innerHTML = "";
     picturecontent.innerHTML = `
-    <div class="carousel-inner">
-                        <div class="carousel-item active">
-                            <img src="./apple/iPhone/colors/${selectedColor}.jpg" class="d-block w-50" alt="...">
-                        </div>
-                        <div class="carousel-item">
-                            <img src="apple/iPhone/colors/${selectedColor}_2.jpg" class="d-block w-50" alt="...">
-                        </div>
-                        <div class="carousel-item">
-                            <img src=".apple/iPhone/colors/${selectedColor}_3.jpg" class="d-block w-50" alt="...">
-                        </div>
-                    </div>`
+<div class="carousel-inner">
+                <div class="carousel-item active">
+                    <img src="./apple/iPhone/colors/${selectedColor}.jpg" class="d-block w-50" alt="...">
+                </div>
+                <div class="carousel-item">
+                    <img src="apple/iPhone/colors/${selectedColor}_2.jpg" class="d-block w-50" alt="...">
+                </div>
+                <div class="carousel-item">
+                    <img src=".apple/iPhone/colors/${selectedColor}_3.jpg" class="d-block w-50" alt="...">
+                </div>
+            </div>`
 }
 function chooseiPhoneProColor() {
     for (i = 0; i < colorList.length; i++) {
@@ -292,17 +292,17 @@ function chooseiPhoneProColor() {
     }
     picturecontent.innerHTML = "";
     picturecontent.innerHTML = `
-    <div class="carousel-inner">
-                        <div class="carousel-item active">
-                            <img src="./apple/iPhonePro/colors/${selectedColor}.jpg" class="d-block w-50" alt="...">
-                        </div>
-                        <div class="carousel-item">
-                            <img src="./apple/iPhonePro/colors/${selectedColor}_2.jpg" class="d-block w-50" alt="...">
-                        </div>
-                        <div class="carousel-item">
-                            <img src="./apple/iPhonePro/colors/${selectedColor}_3.jpg" class="d-block w-50" alt="...">
-                        </div>
-                    </div>`
+<div class="carousel-inner">
+                <div class="carousel-item active">
+                    <img src="./apple/iPhonePro/colors/${selectedColor}.jpg" class="d-block w-50" alt="...">
+                </div>
+                <div class="carousel-item">
+                    <img src="./apple/iPhonePro/colors/${selectedColor}_2.jpg" class="d-block w-50" alt="...">
+                </div>
+                <div class="carousel-item">
+                    <img src="./apple/iPhonePro/colors/${selectedColor}_3.jpg" class="d-block w-50" alt="...">
+                </div>
+            </div>`
 }
 function chooseiPadProColor() {
 
@@ -314,19 +314,18 @@ function chooseiPadProColor() {
     }
     picturecontent.innerHTML = "";
     picturecontent.innerHTML = `
-    <div class="carousel-inner">
-                        <div class="carousel-item active">
-                            <img src="./apple/iPadPro/colors/${selectedColor}-1.jpg" class="d-block w-100" alt="...">
-                        </div>
-                        <div class="carousel-item">
-                            <img src="../apple/iPadPro/colors/${selectedColor}-2.jpg" class="d-block w-100" alt="...">
-                        </div>
-                        <div class="carousel-item">
-                            <img src="../apple/iPadPro/colors/${selectedColor}-3.jpg" class="d-block w-100" alt="...">
-                        </div>
-                    </div>`
+<div class="carousel-inner">
+                <div class="carousel-item active">
+                    <img src="./apple/iPadPro/${selectedColor}-1.jpg" class="d-block w-100" alt="...">
+                </div>
+                <div class="carousel-item">
+                    <img src="../apple/iPadPro/${selectedColor}-2.jpg" class="d-block w-100" alt="...">
+                </div>
+                <div class="carousel-item">
+                    <img src="../apple/iPadPro/${selectedColor}-3.jpg" class="d-block w-100" alt="...">
+                </div>
+            </div>`
 }
-
 function chooseStorage() {
     for (i = 0; i < storageList.length; i++) {
         if (storageList[i].checked) {
@@ -357,6 +356,7 @@ function chooseNet() {
 }
 
 
+// -----------價格計算-----------
 function showiPhonePrice() {
     showcontent.innerHTML = "";
     if (selectedColor == "" || selectedStorage == "" || selectediPhoneType == "") {
@@ -375,6 +375,7 @@ function showiPhonePrice() {
 
     showcontent.appendChild(text);
 }
+
 function showiPhoneProPrice() {
     showcontent.innerHTML = "";
     if (selectedColor == "" || selectedStorage == "" || selectediPhoneType == "") {
@@ -387,14 +388,13 @@ function showiPhoneProPrice() {
         selectediPhone = iPhoneProArray.filter(x => x.color == selectedColor && x.storage == selectedStorage && x.tag == 'no');
     }
     let showprice = selectediPhone[0].price;
-    console.log(showprice);
     let text = document.createElement("div");
-    console.log(des)
     let des = selectediPhone[0].description;
     text.innerHTML = `<h1>您選購的產品為${des} <br>價格為 ${showprice} 元</h1>`;
 
     showcontent.appendChild(text);
 }
+
 function showiPadProPrice() {
     showcontent.innerHTML = "";
     if (selectedColor == "" || selectedStorage == "" || selectednet == "") {
@@ -412,4 +412,5 @@ function showiPadProPrice() {
     text.innerHTML = `<h1>您選購的產品為 iPad Pro 11吋${des} <br> 價格為 ${showprice} 元</h1>`;
 
     showcontent.appendChild(text);
+
 }
