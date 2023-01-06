@@ -27,7 +27,7 @@ document.querySelector(".next").addEventListener("click", function () {
     localdate.setMonth(calendarMonth.innerText - 1);
     nowYear = localdate.getFullYear();
     nowMonth = localdate.getMonth();
-    // console.log(localdate);
+    console.log(localdate);
     if (calendarMonth.innerText == 13) {
         calendarMonth.innerText = 1;
         calendarYear.innerText = Number(calendarYear.innerText) + 1;
@@ -39,7 +39,6 @@ function init() {
     setTbodyDay();
 }
 init();
-
 function setTbodyDay() {
     let tbody = document.querySelector(".calendar tbody");
     tbody.innerHTML = "";
@@ -151,8 +150,8 @@ function setTbodyDay() {
 
 let thisTdEl;
 function setTodo(thisTd) {
-    thisTd.setAttribute("data-toggle", "modal");
-    thisTd.setAttribute("data-target", "#exampleModal");
+    thisTd.setAttribute("data-bs-toggle", "modal");
+    thisTd.setAttribute("data-bs-target", "#exampleModal");
 
     thisTdEl = thisTd;
     nowYear = localdate.getFullYear();

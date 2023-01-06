@@ -1,0 +1,447 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <title>Calendar</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+        crossorigin="anonymous">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.9/css/all.css" integrity="sha384-5SOiIsAziJl6AWe0HWRKTXlfcSHKmYV4RBF18PPJ173Kzn7jzMyFuTtk8JA7QQG1"
+        crossorigin="anonymous">
+    <style>
+        .set {
+            width: 200px;
+            height: 100px;
+            text-align: center;
+            background-color: #e7e7e7;
+        }
+
+        .exset {
+            width: 200px;
+            height: 100px;
+            text-align: center;
+            background-color: rgb(145, 139, 139);
+
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col">
+                <div style="background-color:darksalmon; width:100%;height:80%;">
+                    <br/> </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-2">
+                <button type="button" id="left">
+                    <i class="fas fa-angle-left"></i>
+                </button>
+            </div>
+            <div class="col-8" style="text-align:center;">
+                <h1>
+                    <span id="year"></span>年
+                    <span id="month"></span>月</h1>
+            </div>
+            <div class="col-2">
+                <button type="button" id="right" style="float:right;">
+                    <i class="fas fa-angle-right"></i>
+                </button>
+            </div>
+        </div>
+    </div>
+    <div class="container">
+        <div class="row">
+            <div class="col">
+                <table>
+
+                </table>
+            </div>
+        </div>
+    </div>
+    <!-- Modal -->
+    <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">設定事項</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <span>顏色:</span>
+                    <input type="color" id="color" name="favcolor" value="#ff0000">
+                    <br/>
+                    <br/>
+                    <span>時間:</span>
+                    <input type="time" id="time" />
+                    <br/>
+                    <br/>
+                    <span>事件:</span>
+                    <input type="text" id="title" />
+                    <hr>
+                    <h5>地圖:
+                        <input type="text" id="address" style="width: 300px;" />
+                        <button type="button" id="search" class="btn btn-primary">搜尋</button>
+                    </h5>
+                    <div id="map" style="width:400px;height:300px">
+                    </div>
+                    <hr>
+                    <h5>顯示事件</h5>
+                    <div id="list">
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" id="update" class="btn btn-primary">編輯</button>
+                    <button type="button" id="del" class="btn btn-primary">刪除</button>
+                    <button type="button" class="btn btn-primary" id="save" data-dismiss="modal">儲存</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+        crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+        crossorigin="anonymous"></script>
+    <script>
+        var Today = new Date();
+        var year = Today.getFullYear();
+        var month = Today.getMonth();
+        printday();
+        loadlocalStorage();
+        show();
+        save();
+
+        var left = document.getElementById("left");
+        left.onclick = function () {
+            Today = new Date(year, month - 1, 1);
+            deledate();
+            printday();
+            loadlocalStorage();
+            save();
+            show();
+        }
+        var right = document.getElementById("right");
+        right.onclick = function () {
+            Today = new Date(year, month + 1, 1);
+            deledate();
+            printday();
+            loadlocalStorage();
+            save();
+            show();
+        }
+
+        function deledate() {
+            var table = document.querySelector("table");
+            table.innerText = "";
+        }
+
+        function printday() {
+            var x = 1;
+            var y = 1;
+            year = Today.getFullYear();
+            month = Today.getMonth();
+            var firstday = getFirstday(year, month); //第一天星期幾
+            var Lastday = getLastday(year, month); //最後一天星期幾
+            var monthLen = getMonthLen(year, month); //這個月幾天
+            var exmonthLen = getMonthLen(year, month - 1); //上個月幾天
+            var table = document.querySelector("table");
+            document.getElementById("year").innerText = year;
+            document.getElementById("month").innerText = month + 1;
+            var exmonth = exmonthLen;
+
+            var week = ["Mon", "TUE", "WED", "THU", "FRI", "SAT", "SUN"];
+            var row = document.createElement("tr");
+            for (i = 0; i < week.length; i++) {
+                var th = document.createElement("th");
+                th.innerText = week[i];
+                th.style.color = "lightcoral";
+                th.style.textAlign = "center";
+                row.appendChild(th);
+            }
+            table.appendChild(row);
+
+            if (firstday == 0) {
+                firstday += 7;
+            }
+            Today.setDate(1)
+            while (Today.getDay() != 1) {
+                Today.setDate(Today.getDate() - 1);
+            }
+            exmonth = Today.getDate();
+            for (var i = 1; i < 7; i++) {
+                var row = document.createElement("tr");
+                for (var j = 1; j < 8; j++) {
+                    if (firstday > 1) {
+                        var cell = document.createElement("td");
+                        var ul = document.createElement("ul");
+                        cell.innerText = exmonth;
+                        cell.id = Today.getFullYear() + "" + (Today.getMonth() + 1) + "" + Today.getDate();
+                        firstday--;
+                        exmonth++;
+                        cell.className = "exset";
+                        cell.appendChild(ul);
+                        row.appendChild(cell);
+                    } else if (x <= monthLen) {
+                        var cell = document.createElement("td");
+                        var ul = document.createElement("ul");
+                        cell.innerText = x;
+                        cell.id = Today.getFullYear() + "" + (Today.getMonth() + 1) + "" + Today.getDate();
+                        x++;
+                        cell.className = "set";
+                        cell.appendChild(ul);
+                        row.appendChild(cell);
+                    } else if (Lastday < 7) {
+                        var cell = document.createElement("td");
+                        var ul = document.createElement("ul");
+                        cell.innerText = y;
+                        cell.id = Today.getFullYear() + "" + (Today.getMonth() + 1) + "" + Today.getDate();
+                        y++;
+                        Lastday++;
+                        cell.className = "exset";
+                        cell.appendChild(ul);
+                        row.appendChild(cell);
+                    }
+                    Today.setDate(Today.getDate() + 1);
+                }
+                table.appendChild(row);
+            }
+        }
+
+        function getFirstday(year, month) {
+            var firstday = new Date(year, month, 1);
+            return firstday.getDay();
+        }
+
+        function getLastday(year, month, monthLen) {
+            var monthLen = getMonthLen(year, month);
+            var Lastday = new Date(year, month, monthLen);
+            return Lastday.getDay();
+        }
+
+        function getMonthLen(year, month) {
+            var myStartDate = new Date(year, month + 1, 1);
+            myStartDate.setHours(myStartDate.getHours() - 3);
+            return myStartDate.getDate();
+        }
+        var thisid;
+
+        function show() {
+            var tds = document.getElementsByTagName("td");
+            for (var i = 0; i < tds.length; i++) {
+                var td = tds[i];
+                td.onclick = function () {
+                    thisid = this.id;
+                    $('#list').html("");
+                    $('#exampleModal').modal('show');
+                    $('#del').val(this.id)
+                    var id = "#" + thisid;
+                    var li = $(id).find("li");
+                    var j = 0;
+                    $(li).each(function () {
+                        $('#list').append($('<input>').attr("type", "radio").attr('name', 'name').val(j));
+                        $('#list').append($('<label>').text($(this).text()));
+                        $('#list').append($('<br>'));
+                        j++;
+                    });
+
+                    //map
+                    var map;
+                    var marker = null;
+                    var center = {
+                        lat: 24.7571075,
+                        lng: 120.952429
+                    };
+                    var directionsService = new google.maps.DirectionsService();
+                    var directionsDisplay = new google.maps.DirectionsRenderer();
+                    map = new google.maps.Map(document.getElementById("map"), {
+                        center: center,
+                        zoom: 13
+                    });
+                    directionsDisplay.setMap(map);
+                    map.addListener("click", function (e) {
+                        map.setCenter(e.latLng);
+                        if (marker != null) {
+                            marker.setMap(null);
+                            marker = null;
+                        }
+                        marker = new google.maps.Marker({
+                            position: e.latLng,
+                            map: map,
+                        });
+                        var geocoder = new google.maps.Geocoder;
+                        var infowindow = new google.maps.InfoWindow;
+                       // console.log(e.latLng.lat() + "," + e.latLng.lng());
+                        geocoder.geocode({
+                            'location': {
+                                lat: e.latLng.lat(),
+                                lng: e.latLng.lng()
+                            }
+                        }, function (results, status) {
+                            if (status === 'OK') {
+                                if (results[1]) {
+                                    map.setZoom(11);
+                                    infowindow.setContent(results[1].formatted_address);
+                                    infowindow.open(map, marker);
+                                    $("#address").val(results[1].formatted_address);
+                                } else {
+                                    window.alert('No results found');
+                                }
+                            } else {
+                                window.alert('Geocoder failed due to: ' + status);
+                            }
+                        });
+                    });
+                    $("#search").click(function () {
+                        var geocoder = new google.maps.Geocoder;
+                        marker = null;
+                        address = $("#address").val();
+                        geocoder.geocode({
+                            'address': address
+                        }, function (results, status) {
+                           // console.log(results);
+                            if (status === 'OK') {
+                                map.setCenter(results[0]['geometry']['location']);
+                                marker = new google.maps.Marker({
+                                    position: results[0]['geometry']['location'],
+                                    map: map
+                                });
+                            }
+                        });
+                        searchCheck = true;
+                    })
+
+                }
+            }
+        }
+
+        var del = document.getElementById("del");
+        del.onclick = function () {
+            $('input[name=name]').each(function () {
+                if (this.checked == true) {
+                    var load = JSON.parse(localStorage.getItem(thisid));
+                    load.Items.splice(this.value, 1);
+                    localStorage.setItem(thisid, JSON.stringify(load));
+                    location.reload();
+                }
+            })
+        }
+
+
+        $('#exampleModal').click(function () {
+            $('input[name=name]').each(function () {
+                if (this.checked == true) {
+                    var load = JSON.parse(localStorage.getItem(thisid));
+                    var data = load.Items[this.value];
+                    $("#title").val(data.title);
+                    $("#time").val(data.time);
+                    $("#color").val(data.color);
+                }
+            })
+        })
+        $("#update").click(function () {
+            $('input[name=name]').each(function () {
+                if (this.checked == true) {
+                    var load = JSON.parse(localStorage.getItem(thisid));
+                    load.Items.splice(this.value, 1);
+                    localStorage.setItem(thisid, JSON.stringify(load));
+                    var scheduleItems = {
+                        title: document.getElementById("title").value,
+                        time: document.getElementById("time").value,
+                        color: document.getElementById("color").value
+                    }
+                    load.Items.push(scheduleItems);
+                    localStorage.setItem(thisid, JSON.stringify(load));
+                    location.reload();
+                }
+            })
+
+        })
+
+
+        function save() {
+            var save = document.getElementById("save");
+            save.onclick = function () {
+                if (document.getElementById("title").value != "" && document.getElementById("time").value !=
+                    "") {
+                    if (localStorage.length != 0) {
+                        if (localStorage[thisid] == undefined) {
+                            var scheduleItem = {
+                                key: thisid,
+                                Items: []
+                            }
+                            var scheduleItems = {
+                                title: document.getElementById("title").value,
+                                time: document.getElementById("time").value,
+                                color: document.getElementById("color").value
+                            }
+                            scheduleItem.Items.push(scheduleItems);
+                            localStorage.setItem(thisid, JSON.stringify(scheduleItem));
+                            location.reload();
+                            return;
+                        }
+                        if (JSON.parse(localStorage[thisid]).Items.length != 0) { //重複
+                            var scheduleItems = {
+                                title: document.getElementById("title").value,
+                                time: document.getElementById("time").value,
+                                color: document.getElementById("color").value
+                            }
+                            var x = JSON.parse(localStorage.getItem(thisid));
+                            x.Items.push(scheduleItems);
+                            localStorage.setItem(thisid, JSON.stringify(x));
+                            location.reload();
+                        }
+
+                    } else {
+                        var scheduleItem = {
+                            key: thisid,
+                            Items: []
+                        }
+                        var scheduleItems = {
+                            title: document.getElementById("title").value,
+                            time: document.getElementById("time").value,
+                            color: document.getElementById("color").value
+                        }
+                        scheduleItem.Items.push(scheduleItems);
+                        localStorage.setItem(thisid, JSON.stringify(scheduleItem));
+                        location.reload();
+                    }
+                } else {
+                    alert("請輸入事件");
+                }
+            }
+        }
+
+        function loadlocalStorage() {
+            for (var item in localStorage) {
+                if (item == "length") break;
+                var items = JSON.parse(localStorage[item]);
+                for (var td of $("td")) {
+                    if (td.id == items.key) {
+                        for (var tmp of items.Items) {
+                            var li = $("<li>").html("時間:" + tmp.time + "<br/>" + "事件:" + tmp.title)
+                                .css("background-color", tmp.color)
+                                .css("list-style-type", "none");
+                            var id = "#" + td.id;
+                            var ul = $(id).find("ul");
+                            ul.append(li);
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+</body>
+
+</html>
