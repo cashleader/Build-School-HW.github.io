@@ -1,8 +1,8 @@
 main {
-    background-image: url("./bgc.jpg");
     height: 100vh;
     font-family: "Noto Sans CJK TC", "Microsoft JhengHei",
         PingFang, STHeiti, sans-serif, serif;
+        background-image: url(./bgc.jpg);
 }
 
 h1 {
