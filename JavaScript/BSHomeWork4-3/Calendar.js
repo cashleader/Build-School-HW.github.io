@@ -1,231 +1,167 @@
-let localdate = new Date();
-let nowYear = localdate.getFullYear();
-let nowMonth = localdate.getMonth();
-let nowDay = localdate.getDate();
-let currentIndex;
-let currentDate;
+/*
+        TODO:
+        1.動態產生出日期
+        2.可以添加行程
+     */
+// 宣告   
+const today = new Date() //今天
+let year = today.getFullYear() //年
+let month = today.getMonth() //月份 1月是0
 
-let calendarYear = document.querySelector(".calendar-year");
-calendarYear.innerText = nowYear;
-let calendarMonth = document.querySelector(".calendar-month");
-calendarMonth.innerText = nowMonth + 1;
+let currentIndex
+//DOM
+const yearMonthText = document.querySelector('.year-month')
+const dateArea = document.querySelector('tbody')
 
-document.querySelector(".prev").addEventListener("click", function () {
-    calendarMonth.innerText -= 1;
-    localdate.setMonth(calendarMonth.innerText - 1);
-    nowYear = localdate.getFullYear();
-    nowMonth = localdate.getMonth();
-    if (calendarMonth.innerText == 0) {
-        calendarMonth.innerText = 12;
-        calendarYear.innerText -= 1;
-    }
-    setTbodyDay();
-});
+const addModal = document.querySelector('#add-modal')
+const editModal = document.querySelector('#edit-modal')
 
-document.querySelector(".next").addEventListener("click", function () {
-    calendarMonth.innerText = Number(calendarMonth.innerText) + 1;
-    localdate.setMonth(calendarMonth.innerText - 1);
-    nowYear = localdate.getFullYear();
-    nowMonth = localdate.getMonth();
-    console.log(localdate);
-    if (calendarMonth.innerText == 13) {
-        calendarMonth.innerText = 1;
-        calendarYear.innerText = Number(calendarYear.innerText) + 1;
-    }
-    setTbodyDay();
-});
+const addDateInput = document.querySelector('#add-date')
+const addValueInput = document.querySelector('#add-value')
+const editDateInput = document.querySelector('#edit-date')
+const editValueInput = document.querySelector('#edit-value')
 
-function init() {
-    setTbodyDay();
-}
-init();
-function setTbodyDay() {
-    let tbody = document.querySelector(".calendar tbody");
-    tbody.innerHTML = "";
+//function
+function renderDate() {
+    dateArea.innerHTML = ''
 
-    let allDays = new Date(
-        Number(calendarYear.innerText),
-        Number(calendarMonth.innerText), //格式規定月從0開始
-        0
-    ).getDate();
-    // console.log(allDays);
-    let firstDate = new Date(
-        Number(calendarYear.innerText),
-        Number(calendarMonth.innerText - 1), //格式規定月從0開始
-        1
-    ).getDay();
+    yearMonthText.innerText = `${year}年 - ${month + 1}月`
 
-    // console.log(firstDate);
-    //3個for
-    let firstrow = false;
-    // for (let i = 0; i < allDays; i++) {
-    let i = 0;
-    while (i < allDays) {
-        let tr = document.createElement("tr");
-        let nextDate = 1;
-        for (let row = 0; row < 7; row++) {
-            //填補前面的空格
-            if (firstrow == false) {
-                let predate = new Date(nowYear, nowMonth, 0);
-                //取得上個月一共有幾天 減去本月第一天星期-1 就是顯示上月的起始日期
-                let allPreDate = predate.getDate();
-                allPreDate -= firstDate - 1;
-                for (let j = 0; j < firstDate; j++) {
-                    let td = document.createElement("td");
-                    td.innerText = allPreDate;
-                    allPreDate++;
-                    td.style.backgroundColor = "#eee";
-                    tr.appendChild(td);
-                    row++;
+    //這個月第一天禮拜幾?
+    let firstDay = new Date(year, month, 1).getDay()
+    //這個月有幾天?
+    let dayOfMonth = new Date(year, month + 1, 0).getDate()
+
+    let rows = Math.ceil((dayOfMonth + firstDay) / 7)
+    let day = 1
+
+    for (let row = 0; row < rows; row++) {
+        let tr = document.createElement('tr')
+        for (let col = 0; col < 7; col++) {
+            let td = document.createElement('td')
+            if (row == 0 && col < firstDay) {
+                //上個月
+                td.innerText = 'A'
+            }
+            else {
+                if (day <= dayOfMonth) {
+                    //這個月
+                    let d = day
+                    td.innerText = day
+
+                    if (localStorage.getItem(`${year}-${month + 1}-${day}`) != null) {
+                        let ul = document.createElement('ul')
+
+                        let todoList = JSON.parse(localStorage.getItem(`${year}-${month + 1}-${day}`))
+                        todoList.forEach((item, index) => {
+                            let li = document.createElement('li')
+                            li.innerText = item.title
+
+                            li.onclick = function (e) {
+                                editDateInput.value = `${year}-${month + 1}-${d}`
+                                editValueInput.value = item.title
+
+                                currentIndex = index
+
+                                bootstrap.Modal.getOrCreateInstance(editModal).show()
+                                e.stopPropagation()
+                            }
+
+                            ul.appendChild(li)
+                        })
+                        td.appendChild(ul)
+                    }
+
+                    td.onclick = function () {
+                        addDateInput.value = `${year}-${month + 1}-${d}`
+                        bootstrap.Modal.getOrCreateInstance(addModal).show()
+                    }
                 }
-                firstrow = true;
+                else {
+                    //下個月
+                    td.innerText = 'B'
+                }
+                day++
             }
-            let td = document.createElement("td");
-            //填補後面的空格
-            if (i >= allDays) {
-                td.innerText = nextDate;
-                nextDate++;
-                td.style.backgroundColor = "#eee";
-                tr.appendChild(td);
-                i++;
-                continue;
-            }
-            td.innerText = i + 1;
-
-            td.setAttribute("data-date", `${nowYear}-${nowMonth}-${i + 1}`);
-            td.setAttribute("data-day", i + 1);
-            // console.log(td.dataset.date);
-            // 點擊日期表格，開啟新增代辦事項視窗
-            td.addEventListener("click", function () {
-                setTodo(this);
-            });
-            //////////////////////////////////////////////////////
-            if (
-                localStorage.getItem(`${nowYear}-${nowMonth}-${i + 1}`) != null
-            ) {
-                let todoList = JSON.parse(
-                    localStorage.getItem(`${nowYear}-${nowMonth}-${i + 1}`)
-                );
-                let ul = document.createElement("ul");
-
-                todoList.forEach((element, index) => {
-                    // console.log(element);
-                    let li = document.createElement("li");
-                    li.innerText = element.title;
-                    li.style.backgroundColor = element.color;
-                    li.setAttribute("index", index);
-
-                    //代辦事項li標題點擊事件
-                    li.addEventListener("click", function (e) {
-                        e.stopPropagation();
-
-                        currentIndex = index;
-                        currentDate = td.dataset.date;
-
-                        document.querySelector(
-                            "#todoModal .todo-title"
-                        ).value = `${element.title}`;
-                        document.querySelector(
-                            "#info-area .todo-things"
-                        ).value = `${element.things}`;
-                        document.querySelector(
-                            "#info-area .todo-color"
-                        ).value = `${element.color}`;
-                        $("#todoModal").modal("show");
-                    });
-                    //如果index大於3 建立總清單
-                    ul.appendChild(li);
-                });
-
-                td.appendChild(ul);
-            }
-
-            //////////////////////////////////////////////////////
-            tr.appendChild(td);
-            i++;
+            tr.appendChild(td)
         }
-        tbody.appendChild(tr);
+        dateArea.appendChild(tr)
     }
 }
 
-let thisTdEl;
-function setTodo(thisTd) {
-    thisTd.setAttribute("data-bs-toggle", "modal");
-    thisTd.setAttribute("data-bs-target", "#exampleModal");
-
-    thisTdEl = thisTd;
-    nowYear = localdate.getFullYear();
-    nowMonth = localdate.getMonth();
-    nowDay = thisTd.dataset.day;
-    // console.log(thisTd);
+function nextMonth() {
+    month++
+    if (month == 12) {
+        year++
+        month = 0
+    }
+    renderDate()
 }
 
-let btnsaveTodo = document.querySelector(".btn-todo-save");
-btnsaveTodo.addEventListener("click", function () {
-    btnSaveTodof();
-});
-function btnSaveTodof() {
-    let inputTitle = document.querySelector("#exampleModal .todo-title").value;
-    let inputThings = document.querySelector("#exampleModal .things").value;
-    let inputColor = document.querySelector("#exampleModal .color").value;
-
-    let yearMonthDay = `${nowYear}-${nowMonth}-${nowDay}`;
-
-    saveToLocalStorage(yearMonthDay, inputTitle, inputThings, inputColor);
+function previousMonth() {
+    month--
+    if (month == -1) {
+        year--
+        month = 11
+    }
+    renderDate()
 }
 
-function saveToLocalStorage(yearMonthDay, inputTitle, inputThings, inputColor) {
+function addTodoItem() {
+    let date = addDateInput.value
+    let todoItem = addValueInput.value
+
     let todoObj = {
-        title: inputTitle,
-        things: inputThings,
-        color: inputColor,
-    };
-    //存放localStorage資料
-    let todoList = [];
-    if (localStorage.getItem(yearMonthDay) == null) {
-        todoList.push(todoObj);
-    } else {
-        let alreadyTodoList = JSON.parse(localStorage.getItem(yearMonthDay));
-        alreadyTodoList.push(todoObj);
-        todoList = alreadyTodoList;
+        title: todoItem
     }
-    localStorage.setItem(yearMonthDay, JSON.stringify(todoList));
-    //重新渲染表格
-    setTbodyDay();
+
+    let todoList = []
+
+    if (localStorage.getItem(date) == null) {
+        todoList.push(todoObj)
+    } else {
+        todoList = JSON.parse(localStorage.getItem(date))
+        todoList.push(todoObj)
+    }
+
+    localStorage.setItem(date, JSON.stringify(todoList))
+
+    bootstrap.Modal.getOrCreateInstance(addModal).hide()
+
+    renderDate()
 }
 
-document
-    .querySelector("#todoModal .btn-todo-edit")
-    .addEventListener("click", function () {
-        // console.log(currentIndex);
-        // console.log(currentDate);
-        let inputTitle = document.querySelector("#todoModal .todo-title").value;
-        let inputThings = document.querySelector("#todoModal .todo-things")
-            .value;
-        let inputColor = document.querySelector("#todoModal .todo-color").value;
-        let todoList = JSON.parse(localStorage.getItem(currentDate));
-        let todoObj = {
-            title: inputTitle,
-            things: inputThings,
-            color: inputColor,
-        };
-        //把原本位置的todoObj刪除，插入修改後的todoObj
-        todoList.splice(currentIndex, 1, todoObj);
-        //重新把資料取代回localStorage
-        localStorage.setItem(currentDate, JSON.stringify(todoList));
-        //重新渲染表格
-        setTbodyDay();
-    });
+function editTodoItem() {
+    let date = editDateInput.value
+    let todoItem = editValueInput.value
 
-document
-    .querySelector("#todoModal .btn-todo-delete")
-    .addEventListener("click", function () {
-        let todoList = JSON.parse(localStorage.getItem(currentDate));
-        todoList.splice(currentIndex, 1);
-        if (todoList.length === 0) {
-            localStorage.removeItem(currentDate);
-        } else {
-            localStorage.setItem(currentDate, JSON.stringify(todoList));
-        }
-        setTbodyDay();
-    });
+    let todoList = JSON.parse(localStorage.getItem(date))
+
+    todoList[currentIndex] = {
+        title: todoItem
+    }
+
+    localStorage.setItem(date, JSON.stringify(todoList))
+
+    bootstrap.Modal.getOrCreateInstance(editModal).hide()
+
+    renderDate()
+}
+
+function deleteTodoItem() {
+    let date = editDateInput.value
+
+    let todoList = JSON.parse(localStorage.getItem(date))
+    todoList.splice(currentIndex, 1)
+
+    localStorage.setItem(date, JSON.stringify(todoList))
+
+    bootstrap.Modal.getOrCreateInstance(editModal).hide()
+
+    renderDate()
+}
+
+//window.onload
+window.onload = function () {
+    renderDate()
+}

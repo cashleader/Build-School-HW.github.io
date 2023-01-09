@@ -1,57 +1,58 @@
-.container {
-    color: #39C5BB;
+main {
+    background-image: url("/JavaScript/BSHomeWork4-3/bgc.jpg");
+    height: 100vh;
+    font-family: "Noto Sans CJK TC", "Microsoft JhengHei",
+        PingFang, STHeiti, sans-serif, serif;
 }
 
-.container .calender-header {
-    background-color: #fffd80;
+h1 {
+    display: none;
 }
 
-.container .calender-header button {
-    color: #000;
-    font-weight: 700;
+header {
+    font-weight: bold;
+}
+
+nav {
+    margin: 10px 20px;
+    font-weight: bold;
+}
+
+nav .btn:hover {
     font-size: 40px;
-    background-color: #fffd80;
-    -webkit-user-select: none;
-    -moz-user-select: none;
-    -ms-user-select: none;
-    user-select: none;
-    border: 1px solid transparent;
+    margin: 0 5px;
+    opacity: 0.7;
+
 }
 
-.container .calender-header .calendar-month::after {
-    content: '月';
-}
-
-.container .calendar thead th {
+main .calendar thead th {
     width: 200px;
-    border: 1px solid #000;
+    border: 2px dashed #000;
     text-align: center;
     color: #fff;
     font-size: 24px;
-    background-color: #555;
+    background-color: #1e90ff;
 }
 
-.container .calendar tbody td {
+main .calendar tbody td {
     font-weight: 700;
     vertical-align: top;
     width: 200px;
     height: 100px;
-    border: 1px solid #000;
+    border: 2px dashed #000;
     cursor: pointer;
+    margin-top: 20px;
+    margin-bottom: 3px;
 }
 
-.container .calendar tbody td:hover {
-    background-color: #eee;
-}
-
-.container .calendar tbody td ul li {
-    border: 2px solid rgba(0, 0, 0, 0);
+.calendar tbody td:hover {
+    border: 2px solid #fa0;
     color: #000;
     margin: 3px 0;
     padding: 2px 2px;
     overflow: hidden;
 }
 
-.container .calendar tbody td ul li:hover {
+.calendar tbody td ul li:hover {
     border: 2px solid #000;
 }
