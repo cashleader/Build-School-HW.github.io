@@ -1,68 +1,43 @@
-.topbar {
-    position: fixed;
-    top: 0;
-    background-color: #fff;
-    z-index: 1;
+*{
+    font-family: 'Noto Sans TC', sans-serif;
+}
+.title {
+    width: 100px;
 }
 
-h1 span{
-    color:#888;
+.box {
+    box-sizing: border-box;
+    padding: 15px;
 }
 
-input[type="radio"] {
-    display: none;
+.color {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
 }
 
-input[type="radio"]:checked+label {
-    border: 2px solid #fa0;
-    padding: -2px;
+.content {
+    transition: .2s;
 }
 
-.btn-outline-primary {
-    color: #000;
-    border-color: gray;
+.content:active {
+    background-color: rgb(65, 65, 67);
+    color: white;
+    outline: 5px solid rgb(139, 139, 255);
 }
 
-.btn-outline-primary:hover {
-    color: #000;
-    border-color: #fa0;
-    background-color: #f00;
+h2 {
+    font-weight: 700;
+    font-size: 25px;
+    margin-top: 0.2rem;
+    margin-bottom: 0.2rem;
 }
 
-.selfbtn {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 36px;
-    height: 36px;
-    border: 0px solid #fff;
-    background-color: #fff;
-    border-radius: 50% 50%;
-    margin: 0 2px;
+.total {
+    font-weight: 900;
+    font-size: 40px;
 }
 
-.selfbtn img {
-    padding: 5px;
-}
-
-.kv-box {
-    margin-top: 50px;
-}
-
-@media screen and (min-width:768px) {
-    .kv-box {
-        position: relative;
-    }
-    .kv {
-        position: fixed;
-        width: 55%;
-        height: 50vh;
-        top: 20%;
-    }
-}
-
-@media screen and (min-width:1280px) {
-    .kv {
-        width: 50%;
-    }
+.img {
+    vertical-align: middle;
 }

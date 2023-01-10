@@ -33,7 +33,7 @@ body {
 .cell {
     position: absolute;
     margin: 5px;
-    background-image: url("../images/cell_bg.jpeg");
+    background-image: url("./cell_bg.jpeg");
     width: 120px;
     height: 120px;
     border-radius: 16px;
