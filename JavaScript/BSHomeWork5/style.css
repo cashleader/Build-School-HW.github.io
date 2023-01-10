@@ -14,7 +14,7 @@ body {
     text-align: center;
 }
 
-.main>a {
+.main>button {
     text-decoration: none;
     color: white;
     font-size: 50px;
