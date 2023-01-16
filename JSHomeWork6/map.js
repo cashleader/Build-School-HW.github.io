@@ -33,14 +33,14 @@ function setMapItem() {
                 let area = areaData.find(y => y.District == x.Town)
                 return {
                     ...x,
-                    Town: `{x.Town}`,
+                    Town: `${x.Town}`,
                     lat: area != undefined ? area.Lat : undefined,
                     lng: area != undefined ? area.Lng : undefined
                 }
             }).filter(x => x.lng != undefined).groupBy('Town');
-            console.log(carAreaData)
-            // renderMarker();
-            // initCountySelect();
+            // console.log(carAreaData)
+            renderMarker();
+            initCountySelect();
 
         })
 }
@@ -54,6 +54,7 @@ function renderMarker() {
             <h4>${data[0].Town}</h4>
             `
         )
+        console.log(data[0].Town)
         marker.addEventListener('click', function() {
             countyText.innerText = data[0].Town;
             tbody.innerHTML = '';
@@ -66,7 +67,7 @@ function renderMarker() {
                 let addressTd = document.createElement('td');
                 let otherTd = document.createElement('td');
                 nameTd.innerText = `${x.name}`
-                addressTd.innerText=`${x.adress}`
+                addressTd.innerText=`${x.address}`
                 otherTd.innerText=`${x.other}`
 
                 nameTr.appendChild(nameTd)
