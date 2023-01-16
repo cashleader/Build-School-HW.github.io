@@ -20,7 +20,7 @@ function initMap() {
     })
     // 設定圖層 openstreetmap
     let osmUrl = 'https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png'
-    let osm = new L.TileLayer(osmUrl, { minZoom: 11, maxZoom: 25 })
+    let osm = new L.TileLayer(osmUrl, { minZoom: 10, maxZoom: 18})
     map.addLayer(osm)
 }
 
