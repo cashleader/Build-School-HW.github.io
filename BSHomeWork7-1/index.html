@@ -1,22 +1,538 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="">
+    <link rel="stylesheet" href="./reset.css">
     <title>MAIKON(手刻)</title>
 </head>
-<body>
-    <header>
-        <h1>MAIKON</h1>
-        <div class="logo">
-            <img src="maikon/logo.png" alt="">
-        </div>
-        <label for=""></label>
 
+<body>
+
+    <header>
+        <h1>Maikon</h1>
+        <nav class="container container-nav ">
+
+            <div class="logo">
+                <a href="#">
+                    <img src="./img/logo.png" alt="Maikon">
+                </a>
+            </div>
+            <input type="checkbox" name="" id="menu-control">
+            <!-- <input type="checkbox" name="" id="navbar-control"> -->
+            <!-- 漢堡選單符號 -->
+            <label for="menu-control" class="HB">
+                <span></span>
+                <span></span>
+                <span></span>
+            </label>
+
+            <div class="navbar">
+                <!-- <label for="navbar-control" class="x"><i class="fa-solid fa-xmark"></i></label> -->
+                <a href="#" id="x"></a>
+                <a href="#">Home</a>
+                <a href="#">About</a>
+                <a href="#">Services</a>
+                <a href="#">Team</a>
+                <a href="#">Case studio</a>
+                <a href="#">Contacts</a>
+                <a href="#" class="btn-subscribe">SUBSCRIBE</a>
+            </div>
+
+        </nav>
     </header>
-    <article></article>
-    <footer></footer>
+
+    <!-- 主圖2區 -->
+    <main>
+        <section class="kv">
+            <!-- 第一區 -->
+            <div class="container container-kv">
+                <div class="row">
+                    <div class="col-12 col-md-6">
+                        <div class="text-kv">
+                            <h2>Our creativity is
+                                your success</h2>
+                            <p>We break all boundaries if they happen on our way of project’s development!</p>
+                            <div class="btn-kv">
+                                <button class="btn-learnmore">LEARN MORE</button>
+                                <button class="btn-play"><img src="./img/play-button.svg" alt="watch-video"></button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12 col-md-6">
+                        <div class="pic-kv">
+                            <img src="./img/home-image-1.svg" alt="">
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+            <!-- 第二區 -->
+            <div class="container container-kv">
+                <div class="row">
+                    <div class="col-12 col-md-5">
+                        <div class="text-kv">
+                            <h2>Creative challenges are our passion</h2>
+                            <p>Our team of designers and developers work closely together to build a creative and
+                                positive working environment. Functionality is as important to us as aesthetics.</p>
+                            <div class="btn-kv">
+                                <button class="btn-aboutus">ABOUT US</button>
+                                <button class="btn-contactus">CONTACT US</button>
+
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12 col-md-7">
+                        <div class="pic-kv">
+                            <img src="./img/home-image-2.png" alt="">
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section>
+            <!-- icon -->
+            <div class="container container-iconbox">
+                <h2>We provide a wide range of creative services</h2>
+                <div class="row">
+                    <div class="col-12 col-md-4">
+                        <div class="iconbox">
+                            <div class="pic">
+                                <img src="./img/icon-1.svg" alt="">
+                            </div>
+                            <h3>Web Design & Brending</h3>
+                            <p>A great brand combines design and conveys company’s value messaging to evoke emotion and
+                                drive strategy.</p>
+                            <a href="#" class="btn-readmore">READ MORE</a>
+                        </div>
+
+
+                    </div>
+                    <div class="col-12 col-md-4">
+                        <div class="iconbox">
+                            <div class="pic">
+                                <img src="./img/icon-2.svg" alt="">
+                            </div>
+                            <h3>Graphic Design</h3>
+                            <p>Rich experience plus unlimited imagination create our successful service discovered by
+                                clients.</p>
+                            <a href="#" class="btn-readmore">READ MORE</a>
+                        </div>
+                    </div>
+                    <div class="col-12 col-md-4">
+                        <div class="iconbox">
+                            <div class="pic">
+                                <img src="./img/icon-3.svg" alt="">
+                            </div>
+                            <h3>Video Production</h3>
+                            <p>Creating and handling professional video is our strong point. It plays major role in your
+                                digital business strategy.</p>
+                            <a href="#" class="btn-readmore">READ MORE</a>
+                        </div>
+                    </div>
+                    <div class="col-12 col-md-4">
+                        <div class="iconbox">
+                            <div class="pic">
+                                <img src="./img/icon-4.svg" alt="">
+                            </div>
+                            <h3>SEO</h3>
+                            <p>We provide everything your site needs to perform at it’s highest capabilities on the
+                                major
+                                search engines.</p>
+                            <a href="#" class="btn-readmore">READ MORE</a>
+                        </div>
+                    </div>
+                    <div class="col-12 col-md-4">
+                        <div class="iconbox">
+                            <div class="pic">
+                                <img src="./img/icon-5.svg" alt="">
+                            </div>
+                            <h3>Digital Marketing</h3>
+                            <p>We do collateral design, interactive design, hoarding, signage, presentation centres, and
+                                more.</p>
+                            <a href="#" class="btn-readmore">READ MORE</a>
+                        </div>
+                    </div>
+                    <div class="col-12 col-md-4">
+                        <div class="iconbox">
+                            <div class="pic">
+                                <img src="./img/icon-6.svg" alt="">
+                            </div>
+                            <h3>Infographics</h3>
+                            <p>Turn your data into captivating artwork that will keep your audience engaged. Our team
+                                can
+                                help you with it.
+                            </p>
+                            <a href="#" class="btn-readmore">READ MORE</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- Q contactus -->
+        <section>
+            <div class="container container-contactus">
+                <div class="row">
+                    <div class="col-12 col-md-6">
+                        <div class="text-contactus">
+                            <h2>If you have any questions, please contact us</h2>
+                            <p>Our professional support team try to do their best to provide you with high-quality
+                                consultations concerning any question about our services.</p>
+                            <div class="btn-contactandsub">
+                                <button class="btn-contact">CONTACT US</button>
+                                <button class="btn-subscribe">SUBSCRIBE</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12 col-md-6">
+                        <div class="pic-contactus">
+                            <img src="./img/home-image-3.svg" alt="">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- 藍色區 -->
+        <section class="whychoose">
+            <div class="container container-whychoose">
+                <div class="row">
+                    <!-- 四格 -->
+                    <div class="col-12 col-md-6">
+                        <div class="row row-bluebox ">
+                            <div class="bluebox col-12 col-md-5 col-lg-5">
+                                <p><span>1880+</span></p>
+                                <p> Completed projects to the end by our specialists.</p>
+                            </div>
+                            <div class="bluebox col-12 col-md-5 col-lg-5">
+                                <p><span>56</span></p>
+                                <p>A large team of the best specialists.</p>
+                            </div>
+                            <div class="bluebox col-12 col-md-5 col-lg-5">
+                                <p><span>2000+</span></p>
+                                <p>Customers who were satisfied with our work.</p>
+                            </div>
+                            <div class="bluebox col-12 col-md-5 col-lg-5">
+                                <p><span>100%</span></p>
+                                <p>Our values are good organization and result orientation.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- 文字 -->
+                    <div class="col-12 col-md-6">
+                        <div class="text-whychoose">
+                            <h2>Why choose our studio for your projects?</h2>
+                            <p>We are a command of professional and enthusiastic people, who like what they do and are
+                                always in the process of growing and improving their skills.</p>
+                            <a href="#" class="btn-ordersevice">order service</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- teamwork 1~5 -->
+        <section class="teamwork">
+            <!-- 1 -->
+            <div class="container container-teamwork one">
+                <h2>Steps of our work</h2>
+                <div class="row">
+                    <div class="col-12 col-md-6">
+                        <div class="row">
+                            <div class="pic-teamwork col-12 col-md-8">
+
+                                <img src="./img/home-image-4.svg" alt="">
+                                <img src="./img/arrow-1.svg" alt="" id="arr1">
+
+
+                            </div>
+                            <div class="num col-12 col-md-4">
+                                <img src="./img/number-01.svg" alt="">
+
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12 col-md-6">
+                        <div class="text-teamwork col-12 col-md-8">
+                            <h3>Meeting With The Customer</h3>
+                            <p>The first meeting is very import to form contact and discuss the main ideas of the
+                                project.</p>
+
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+            <!-- 2 -->
+            <div class="container container-teamwork two">
+                <div class="row row-pic-teamwork-two">
+                    <div class="pic-teamwork col-12 col-md-4">
+                        <div class="pic-teamwork">
+                            <img src="./img/home-image-5.svg" alt="">
+                            <img src="./img/arrow-2.svg" alt="" id="arr2">
+                        </div>
+                    </div>
+                    <div class="num col-12 col-md-3">
+                        <img src="./img/number-02.svg" alt="">
+
+                    </div>
+
+                    <div class="col-12 col-md-5">
+                        <div class="text-teamwork">
+                            <h3>We Consider And Analyze The Work Plan</h3>
+                            <p>When we understand the main eideas, we proceed to discussing the work plan and analyzing
+                                it.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- 3 -->
+            <div class="container container-teamwork three">
+                <div class="row">
+                    <div class="col-12 col-md-6">
+                        <div class="row">
+                            <div class="pic-teamwork col-12 col-md-8">
+                                <img src="./img/home-image-6.svg" alt="">
+                                <img src="./img/arrow-3.svg" alt="" id="arr3">
+                            </div>
+                            <div class="num col-12 col-md-4">
+                                <img src="./img/number-03.svg" alt="">
+                            </div>
+                        </div>
+
+                    </div>
+                    <div class="col-12 col-md-6">
+                        <div class="text-teamwork col-12 col-md-8">
+                            <h3>Work Hard On The Project</h3>
+                            <p>Our professional team start to handle with your project and embody the conception of
+                                the
+                                project.</p>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+            <!-- 4 -->
+            <div class="container container-teamwork four">
+                <div class="row">
+                    <div class="pic-teamwork col-12 col-md-4">
+                        <img src="./img/home-image-7.svg" alt="">
+                        <img src="./img/arrow-4.svg" alt="" id="arr4">
+                    </div>
+                    <div class="num col-12 col-md-3">
+                        <img src="./img/number-04.svg" alt="">
+                    </div>
+                    <div class="col-12 col-md-5">
+                        <div class="text-teamwork">
+                            <h3>Once Again We Analyze And Check Everything</h3>
+                            <p>We meet, analyze and check the done work and make needed corrections.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- 5 -->
+            <div class="container container-teamwork five">
+                <div class="row">
+                    <div class="col-4 col-md-6">
+                        <div class="row">
+                            <div class="pic-teamwork col-12 col-md-8">
+                                <img src="./img/home-image-8.svg" alt="">
+                            </div>
+                            <div class="num col-12 col-md-4">
+                                <img src="./img/number-05.svg" alt="">
+                            </div>
+
+                        </div>
+
+                    </div>
+                    <div class="col-12 col-md-6">
+                        <div class="text-teamwork col-12 col-md-8">
+                            <h3>We Finish The Work And Give It To The Customer</h3>
+                            <p>The project is ready and we give it to the customer. Also we ask for the feedback
+                                from
+                                the customer.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+        <section class="project">
+            <div class="container container-project">
+                <div class="row title-project">
+                    <div class="col-12 col-md-6">
+                        <h2>Our team's work with Projects</h2>
+                    </div>
+                    <div class="col-btn-allproject col-12 col-md-6">
+                        <a href="#" class="btn-allproject">ALL PROJECT</a>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-pic-project col-12 col-md-4">
+                        <div class="pic-project">
+                            <img src="./img/project-1.jpg" alt="">
+                            <div class="text-project">
+                                <h3>Minimal Creative "Impuls"</h3>
+                                <a href="#">VIEW SITE</a>
+                            </div>
+                        </div>
+
+                    </div>
+
+                    <div class="col-12 col-md-4">
+                        <div class="pic-project">
+                            <img src="./img/project-2.jpg" alt="">
+                            <div class="text-project">
+                                <h3>Travel Company "Tour Up"</h3>
+                                <a href="#">VIEW SITE</a>
+                            </div>
+                        </div>
+
+                    </div>
+
+                    <div class="col-12 col-md-4">
+                        <div class="pic-project">
+                            <img src="./img/project-3.jpg" alt="">
+                            <div class="text-project">
+                                <h3>Restaurant Pizza "Little Italy"</h3>
+                                <a href="#">VIEW SITE</a>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+        <section class="form">
+            <div class="container container-form">
+                <div class="row">
+                    <div class="col-12 col-md-7">
+                        <div class="pic-form">
+                            <img src="./img/home-image-9.svg" alt="">
+                        </div>
+                    </div>
+                    <div class="col-12 col-md-5">
+                        <div class="form-signup">
+                            <h2>Sign up for our consultation</h2>
+                            <p><input type="text" size="40" placeholder="Name"></p>
+                            <p><input type="text" size="40" placeholder="Email"></p>
+                            <p><textarea name="Message" placeholder="Message" cols="43" rows="7"></textarea></p>
+
+
+                            <a href="#" class="btn-send">SEND</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 訂閱區 -->
+        <section class="subscribe">
+            <div class="container container-subscribe">
+                <h2>Subscribe to our news and learn more</h2>
+                <div class="form-subscribe">
+                    <input type="text" placeholder="Your email">
+                    <a href="#" class="btn-subscribe">SUBSCRIBE</a>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+
+    <footer>
+        <section class="footer">
+            <div class="container container-footer">
+                <div class="row">
+                    <div class="col-12 col-md-6 col-lg-3">
+                        <div class="logo-footer">
+                            <img src="./img/logo.png" alt="logo">
+                        </div>
+                        <address>
+                            <div class="phone">
+                                <a href="tel:+10452241267"><span>Phone:</span><span>&nbsp;</span> + 1 (045) - 224 - 12 -
+                                    67 </a>
+                            </div>
+
+                            <br>
+                            <div class="email">
+                                <a
+                                    href="mailto:info@demolink.org"><span>Mail:</span><span>&nbsp;</span>info@demolink.org</a><br>
+                            </div>
+
+                        </address>
+                    </div>
+                    <div class="col-12 col-md-6 col-lg-3">
+                        <div class="footer-services">
+                            <p>Services</p>
+                            <a href="#">Web design & brending</a>
+                            <a href="#">Web development</a>
+                            <a href="#">Full Optimization</a>
+                            <a href="#">Research & Strategy</a>
+                            <a href="#">Management & Marketing</a>
+                            <a href="#">Free support</a>
+                        </div>
+                    </div>
+                    <div class="col-12 col-md-6 col-lg-3">
+                        <div class="footer-about">
+                            <p>About Company</p>
+                            <a href="#">About us</a>
+                            <a href="#">Team</a>
+                            <a href="#">Case studio</a>
+                            <a href="#">Contacts</a>
+                        </div>
+                    </div>
+                    <div class="col-12 col-md-6 col-lg-3">
+                        <div class="footer-social">
+                            <p>Our Social Networks</p>
+                            <span>Join us in the social networks and keep up on the latest news.</span>
+                            <div class="footer-icon">
+                                <a href="#"><i class="fa-brands fa-youtube"></i></a>
+                                <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
+                                <a href="#"><i class="fa-brands fa-instagram"></i></a>
+                                <a href="#"><i class="fa-brands fa-twitter"></i></a>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="copyright">
+            <div class="container container-copyright">
+                <div class="row">
+                    <div class="col-12 col-lg-6">
+                        <p>Copyright &copy;2018 Wordpress Maikon. All Rights Reserved. | Theme design by
+                            <span>Zemez</span>
+                        </p>
+
+                    </div>
+                    <div class="txt-privacy col-12 col-lg-6">
+
+                        <a href="#">Privacy & Policy</a>
+                        <a href="#">FAQ</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </footer>
+
+
+    <div class="to-up">
+        <a href="#"><i class="fa-solid fa-angle-up"></i></a>
+    </div>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"
+        integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
 </body>
-</html> 
+</html>
