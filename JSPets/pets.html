@@ -1,0 +1,108 @@
+<!--
+ * @Author: Jin cashleader0913@gmail.com
+ * @Date: 2023-04-24 19:44:47
+ * @LastEditors: Jin cashleader0913@gmail.com
+ * @LastEditTime: 2023-04-24 20:05:34
+ * @FilePath: \Build-School-HW.github.io\JSPets\pets.html
+ * @Description: 这是默认设置,请设置`customMade`, 打开koroFileHeader查看配置 进行设置: https://github.com/OBKoro1/koro1FileHeader/wiki/%E9%85%8D%E7%BD%AE
+-->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>龍貓遊戲</title>
+    <style>
+        #pet {
+            position: absolute;
+            left: 0;
+            top: 50%;
+            transform: translateY(-50%);
+            width: 50%;
+            height: 50%;
+        }
+    </style>
+</head>
+
+<body>
+    <section class="container mt-3">
+        <h4 class="text-center mb-4">養一隻totoro</h4>
+        <div class="row justify-content-center align-items-center">
+            <div class="col-12 col-md-6 col-lg-4">
+                <div class="d-flex justify-content-center align-items-center">
+                    <div class="p-3">
+                        <img id="pet" src="./images/gray_with_ball_8fps.gif" alt="totoro" style="width:50%;"
+                            onclick="showMessage()">
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row justify-content-center align-items-center mt-4">
+            <div class="col-auto">
+                <button class="btn btn-primary" onclick="play()">玩耍</button>
+            </div>
+            <div class="col-auto">
+                <button class="btn btn-primary" onclick="walk()">走路</button>
+            </div>
+            <div class="col-auto">
+                <button class="btn btn-primary" onclick="sleep()">睡覺</button>
+            </div>
+        </div>
+    </section>
+
+    <script>
+        let totoro = document.getElementById("pet");
+        let isWalking = false;
+        let timer = null;
+        let messages = ["我愛吃甜點", "我想出去玩", "我喜歡跳舞", "我喜歡看電影", "我喜歡睡覺", "我想要一個新球"];
+        function showMessage() {
+            let message = messages[Math.floor(Math.random() * messages.length)];
+            alert(message);
+        }
+        function play() {
+            if (!isWalking) {
+                totoro.src = "./images/gray_wallclimb_8fps.gif";
+                setTimeout(function () { totoro.src = "./images/gray_with_ball_8fps.gif"; }, 5000);
+            } else {
+                throwBall();
+            }
+        }
+        function walk() {
+            if (!isWalking) {
+                totoro.src = "./images/gray_walk_8fps.gif";
+                setTimeout(function () { totoro.src = "./images/gray_with_ball_8fps.gif"; }, 3000);
+            } else {
+                throwBall();
+            }
+        }
+        function sleep() {
+            if (!isWalking) {
+                totoro.src = "./images/gray_lie_8fps.gif";
+                setTimeout(function () { totoro.src = "./images/gray_with_ball_8fps.gif"; }, 10000);
+            } else {
+                throwBall();
+            }
+        }
+        function throwBall() {
+            clearInterval(timer);
+            totoro.src = "./images/gray_walk_8fps.gif";
+            let left = 0;
+            isWalking = true;
+            timer = setInterval(function () {
+                left += 10;
+                if (left >= document.documentElement.clientWidth - totoro.clientWidth) {
+                    clearInterval(timer);
+                    totoro.src = "./images/gray_with_ball_8fps.gif";
+                    isWalking = false;
+                } else {
+                    totoro.style.left = left + "px";
+                }
+            }, 50);
+        }
+
+    </script>
+</body>
+
+</html>
